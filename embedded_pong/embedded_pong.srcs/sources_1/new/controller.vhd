@@ -59,8 +59,13 @@ begin
 
 reset: process(clk) begin
     if rising_edge(clk) and (en = '1') then
-        if unsigned(hcount) >= 30 and unsigned(hcount) < 40 then
---            if unsigned(vcount) 
+
+    end if;
+end process;
+
+draw_paddle: process(clk) begin
+    if rising_edge(clk) and (en = '1') then
+        if unsigned(hcount) >= 30 and unsigned(hcount) < 40 and unsigned(vcount) >= paddle1_y and unsigned(vcount) <= paddle1_y + 50 then
             r_out <= (others => '1');
             g_out <= (others => '1');
             b_out <= (others => '1');
@@ -72,12 +77,6 @@ reset: process(clk) begin
     end if;
 end process;
 
-draw_paddle: process(clk) begin
-    if rising_edge(clk) and (en = '1') then
-
-    end if;
-end process;
-
 draw_ball: process(clk) begin
     if rising_edge(clk) and (en = '1') then
 
@@ -86,7 +85,15 @@ end process;
 
 move_paddle: process(clk) begin
     if rising_edge(clk) and (en = '1') and (frame = '1') then
-
+        if unsigned(hcount) >= ball_x and unsigned(hcount) < ball_x + 5 and unsigned(vcount) >= ball_y and unsigned(vcount) <= ball_y + 5 then
+            r_out <= (others => '1');
+            g_out <= (others => '1');
+            b_out <= (others => '1');
+        else
+            r_out <= (others => '0');
+            g_out <= (others => '0');
+            b_out <= (others => '0');
+        end if;
     end if;
 end process;
 

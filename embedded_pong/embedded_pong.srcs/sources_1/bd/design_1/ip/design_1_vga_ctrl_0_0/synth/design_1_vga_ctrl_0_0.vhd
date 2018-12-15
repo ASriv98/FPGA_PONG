@@ -59,6 +59,7 @@ ENTITY design_1_vga_ctrl_0_0 IS
     en : IN STD_LOGIC;
     hcount : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
     vcount : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+    frame : OUT STD_LOGIC;
     hs : OUT STD_LOGIC;
     vs : OUT STD_LOGIC
   );
@@ -73,6 +74,7 @@ ARCHITECTURE design_1_vga_ctrl_0_0_arch OF design_1_vga_ctrl_0_0 IS
       en : IN STD_LOGIC;
       hcount : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
       vcount : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+      frame : OUT STD_LOGIC;
       hs : OUT STD_LOGIC;
       vs : OUT STD_LOGIC
     );
@@ -96,6 +98,7 @@ BEGIN
       en => en,
       hcount => hcount,
       vcount => vcount,
+      frame => frame,
       hs => hs,
       vs => vs
     );

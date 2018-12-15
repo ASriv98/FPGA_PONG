@@ -15,4 +15,16 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_vga_ct
 # IP: bd/design_1/ip/design_1_clock_div_25_0_0/design_1_clock_div_25_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_clock_div_25_0_0 || ORIG_REF_NAME==design_1_clock_div_25_0_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_controller_0_0/design_1_controller_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_controller_0_0 || ORIG_REF_NAME==design_1_controller_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_debounce_0_0/design_1_debounce_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_debounce_0_0 || ORIG_REF_NAME==design_1_debounce_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_debounce_1_0/design_1_debounce_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_debounce_1_0 || ORIG_REF_NAME==design_1_debounce_1_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_debounce_2_0/design_1_debounce_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_debounce_2_0 || ORIG_REF_NAME==design_1_debounce_2_0} -quiet] -quiet
+
 # XDC: bd/design_1/design_1_ooc.xdc

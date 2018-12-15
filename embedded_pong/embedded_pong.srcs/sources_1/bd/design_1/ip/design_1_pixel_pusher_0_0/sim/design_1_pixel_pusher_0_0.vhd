@@ -57,6 +57,9 @@ ENTITY design_1_pixel_pusher_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
     en : IN STD_LOGIC;
+    r_in : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    b_in : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    g_in : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
     hcount : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     vcount : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     R : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
@@ -72,6 +75,9 @@ ARCHITECTURE design_1_pixel_pusher_0_0_arch OF design_1_pixel_pusher_0_0 IS
     PORT (
       clk : IN STD_LOGIC;
       en : IN STD_LOGIC;
+      r_in : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+      b_in : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+      g_in : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
       hcount : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       vcount : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       R : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
@@ -90,6 +96,9 @@ BEGIN
     PORT MAP (
       clk => clk,
       en => en,
+      r_in => r_in,
+      b_in => b_in,
+      g_in => g_in,
       hcount => hcount,
       vcount => vcount,
       R => R,

@@ -1,0 +1,239 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Dec 15 17:20:48 2018
+# Process ID: 25631
+# Current directory: /home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/design_1_debounce_2_0_synth_1
+# Command line: vivado -log design_1_debounce_2_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_debounce_2_0.tcl
+# Log file: /home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/design_1_debounce_2_0_synth_1/design_1_debounce_2_0.vds
+# Journal file: /home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/design_1_debounce_2_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_debounce_2_0.tcl -notrace
+Command: synth_design -top design_1_debounce_2_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25817 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1286.906 ; gain = 86.891 ; free physical = 7402 ; free virtual = 26170
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_debounce_2_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_2_0/synth/design_1_debounce_2_0.vhd:64]
+INFO: [Synth 8-3491] module 'debounce' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/btn_debounce.vhd:31' bound to instance 'U0' of component 'debounce' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_2_0/synth/design_1_debounce_2_0.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'debounce' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/btn_debounce.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/btn_debounce.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'design_1_debounce_2_0' (2#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_2_0/synth/design_1_debounce_2_0.vhd:64]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1330.531 ; gain = 130.516 ; free physical = 7427 ; free virtual = 26195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1330.531 ; gain = 130.516 ; free physical = 7427 ; free virtual = 26195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1330.531 ; gain = 130.516 ; free physical = 7427 ; free virtual = 26195
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1338.539 ; gain = 138.523 ; free physical = 7409 ; free virtual = 26177
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7105 ; free virtual = 25873
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7104 ; free virtual = 25873
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7103 ; free virtual = 25872
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7101 ; free virtual = 25869
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7101 ; free virtual = 25869
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7101 ; free virtual = 25869
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7101 ; free virtual = 25869
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7101 ; free virtual = 25869
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7101 ; free virtual = 25869
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     6|
+|2     |LUT1   |     2|
+|3     |LUT2   |     1|
+|4     |LUT3   |     1|
+|5     |LUT4   |     2|
+|6     |LUT5   |     2|
+|7     |LUT6   |     4|
+|8     |FDRE   |    25|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+---------+------+
+|      |Instance |Module   |Cells |
++------+---------+---------+------+
+|1     |top      |         |    43|
+|2     |  U0     |debounce |    43|
++------+---------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7101 ; free virtual = 25869
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.906 ; gain = 256.891 ; free physical = 7103 ; free virtual = 25871
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.914 ; gain = 256.891 ; free physical = 7103 ; free virtual = 25871
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+14 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 1589.934 ; gain = 402.480 ; free physical = 7049 ; free virtual = 25817
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/design_1_debounce_2_0_synth_1/design_1_debounce_2_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 2045.539 ; gain = 455.605 ; free physical = 6307 ; free virtual = 25075
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/design_1_debounce_2_0_synth_1/design_1_debounce_2_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_debounce_2_0_utilization_synth.rpt -pb design_1_debounce_2_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2045.539 ; gain = 0.000 ; free physical = 6302 ; free virtual = 25070
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 17:21:42 2018...

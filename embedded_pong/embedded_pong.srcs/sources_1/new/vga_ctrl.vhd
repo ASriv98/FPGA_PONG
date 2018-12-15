@@ -29,7 +29,7 @@ entity vga_ctrl is
         en : in STD_LOGIC;
         hcount : out STD_LOGIC_VECTOR (9 downto 0);
         vcount : out STD_LOGIC_VECTOR (9 downto 0);
---        frame : out STD_LOGIC := '0';
+        frame : out STD_LOGIC := '0';
         hs : out STD_LOGIC;
         vs : out STD_LOGIC);
     end vga_ctrl;
@@ -46,14 +46,14 @@ begin
         if rising_edge(clk) and (en = '1') then
             if unsigned(hCnt) < 799 then
                 hCnt <= STD_LOGIC_VECTOR(unsigned(hCnt) + 1);
---                frame <= '0';
+                frame <= '0';
             else
                 hCnt <= (others => '0');
                 if(unsigned(vCnt) < 524) then
                     vCnt <= STD_LOGIC_VECTOR(unsigned(vCnt) + 1);
                 else
                     vCnt <= (others => '0');
---                    frame <= '1';
+                    frame <= '1';
                 end if;
             end if;
         end if;

@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Sat Dec 15 16:58:03 2018
+// Date        : Sat Dec 15 17:20:47 2018
 // Host        : ece07 running 64-bit Ubuntu 16.04.5 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_pixel_pusher_0_0_sim_netlist.v
@@ -18,6 +18,9 @@
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (clk,
     en,
+    r_in,
+    b_in,
+    g_in,
     hcount,
     vcount,
     R,
@@ -25,90 +28,188 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     G);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_clk_0" *) input clk;
   input en;
+  input [4:0]r_in;
+  input [4:0]b_in;
+  input [5:0]g_in;
   input [9:0]hcount;
   input [9:0]vcount;
   output [4:0]R;
   output [4:0]B;
   output [5:0]G;
 
-  wire \<const0> ;
-  wire [0:0]\^R ;
+  wire [4:0]B;
+  wire [5:0]G;
+  wire [4:0]R;
+  wire [4:0]b_in;
   wire clk;
   wire en;
+  wire [5:0]g_in;
   wire [9:0]hcount;
+  wire [4:0]r_in;
   wire [9:0]vcount;
 
-  assign B[4] = \<const0> ;
-  assign B[3] = \<const0> ;
-  assign B[2] = \<const0> ;
-  assign B[1] = \<const0> ;
-  assign B[0] = \<const0> ;
-  assign G[5] = \<const0> ;
-  assign G[4] = \<const0> ;
-  assign G[3] = \<const0> ;
-  assign G[2] = \<const0> ;
-  assign G[1] = \<const0> ;
-  assign G[0] = \<const0> ;
-  assign R[4] = \^R [0];
-  assign R[3] = \^R [0];
-  assign R[2] = \^R [0];
-  assign R[1] = \^R [0];
-  assign R[0] = \^R [0];
-  GND GND
-       (.G(\<const0> ));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_pixel_pusher U0
-       (.R(\^R ),
+       (.B(B),
+        .G(G),
+        .R(R),
+        .b_in(b_in),
         .clk(clk),
         .en(en),
+        .g_in(g_in),
         .hcount(hcount[9:7]),
+        .r_in(r_in),
         .vcount(vcount[9:5]));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_pixel_pusher
    (R,
-    vcount,
-    hcount,
+    B,
+    G,
     en,
-    clk);
-  output [0:0]R;
-  input [4:0]vcount;
-  input [2:0]hcount;
+    hcount,
+    r_in,
+    clk,
+    b_in,
+    g_in,
+    vcount);
+  output [4:0]R;
+  output [4:0]B;
+  output [5:0]G;
   input en;
+  input [2:0]hcount;
+  input [4:0]r_in;
   input clk;
+  input [4:0]b_in;
+  input [5:0]g_in;
+  input [4:0]vcount;
 
-  wire [0:0]R;
-  wire \R0/i__n_0 ;
-  wire \R[0]_i_1_n_0 ;
+  wire [4:0]B;
+  wire [5:0]G;
+  wire [4:0]R;
+  wire \R[4]_i_1_n_0 ;
+  wire \R[4]_i_2_n_0 ;
+  wire [4:0]b_in;
   wire clk;
   wire en;
+  wire [5:0]g_in;
   wire [2:0]hcount;
+  wire [4:0]r_in;
   wire [4:0]vcount;
 
+  FDRE \B_reg[0] 
+       (.C(clk),
+        .CE(en),
+        .D(b_in[0]),
+        .Q(B[0]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \B_reg[1] 
+       (.C(clk),
+        .CE(en),
+        .D(b_in[1]),
+        .Q(B[1]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \B_reg[2] 
+       (.C(clk),
+        .CE(en),
+        .D(b_in[2]),
+        .Q(B[2]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \B_reg[3] 
+       (.C(clk),
+        .CE(en),
+        .D(b_in[3]),
+        .Q(B[3]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \B_reg[4] 
+       (.C(clk),
+        .CE(en),
+        .D(b_in[4]),
+        .Q(B[4]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \G_reg[0] 
+       (.C(clk),
+        .CE(en),
+        .D(g_in[0]),
+        .Q(G[0]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \G_reg[1] 
+       (.C(clk),
+        .CE(en),
+        .D(g_in[1]),
+        .Q(G[1]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \G_reg[2] 
+       (.C(clk),
+        .CE(en),
+        .D(g_in[2]),
+        .Q(G[2]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \G_reg[3] 
+       (.C(clk),
+        .CE(en),
+        .D(g_in[3]),
+        .Q(G[3]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \G_reg[4] 
+       (.C(clk),
+        .CE(en),
+        .D(g_in[4]),
+        .Q(G[4]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \G_reg[5] 
+       (.C(clk),
+        .CE(en),
+        .D(g_in[5]),
+        .Q(G[5]),
+        .R(\R[4]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hA2A2A222)) 
+    \R[4]_i_1 
+       (.I0(en),
+        .I1(\R[4]_i_2_n_0 ),
+        .I2(hcount[2]),
+        .I3(hcount[1]),
+        .I4(hcount[0]),
+        .O(\R[4]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h15555555)) 
-    \R0/i_ 
+    \R[4]_i_2 
        (.I0(vcount[4]),
         .I1(vcount[1]),
         .I2(vcount[0]),
         .I3(vcount[2]),
         .I4(vcount[3]),
-        .O(\R0/i__n_0 ));
-  LUT6 #(
-    .INIT(64'h1F00FFFF1F000000)) 
-    \R[0]_i_1 
-       (.I0(hcount[0]),
-        .I1(hcount[1]),
-        .I2(hcount[2]),
-        .I3(\R0/i__n_0 ),
-        .I4(en),
-        .I5(R),
-        .O(\R[0]_i_1_n_0 ));
+        .O(\R[4]_i_2_n_0 ));
   FDRE \R_reg[0] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\R[0]_i_1_n_0 ),
-        .Q(R),
-        .R(1'b0));
+        .CE(en),
+        .D(r_in[0]),
+        .Q(R[0]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \R_reg[1] 
+       (.C(clk),
+        .CE(en),
+        .D(r_in[1]),
+        .Q(R[1]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \R_reg[2] 
+       (.C(clk),
+        .CE(en),
+        .D(r_in[2]),
+        .Q(R[2]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \R_reg[3] 
+       (.C(clk),
+        .CE(en),
+        .D(r_in[3]),
+        .Q(R[3]),
+        .R(\R[4]_i_1_n_0 ));
+  FDRE \R_reg[4] 
+       (.C(clk),
+        .CE(en),
+        .D(r_in[4]),
+        .Q(R[4]),
+        .R(\R[4]_i_1_n_0 ));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -1,0 +1,73 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/xilinx/Vivado/2018.2/data/ip'.
+add_files: Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 1342.020 ; gain = 160.078 ; free physical = 7749 ; free virtual = 26518
+Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 26409 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1342.020 ; gain = 0.000 ; free physical = 7640 ; free virtual = 26408
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:29]
+INFO: [Synth 8-3491] module 'design_1' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:14' bound to instance 'design_1_i' of component 'design_1' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'design_1' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:33]
+INFO: [Synth 8-3491] module 'design_1_clock_div_25_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_clock_div_25_0_0_stub.vhdl:5' bound to instance 'clock_div_25_0' of component 'design_1_clock_div_25_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'design_1_clock_div_25_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_clock_div_25_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_controller_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_controller_0_0_stub.vhdl:5' bound to instance 'controller_0' of component 'design_1_controller_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_controller_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_debounce_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_debounce_0_0_stub.vhdl:5' bound to instance 'debounce_0' of component 'design_1_debounce_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'design_1_debounce_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_debounce_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_debounce_1_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_debounce_1_0_stub.vhdl:5' bound to instance 'debounce_1' of component 'design_1_debounce_1_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'design_1_debounce_1_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_debounce_1_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_debounce_2_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_debounce_2_0_stub.vhdl:5' bound to instance 'debounce_2' of component 'design_1_debounce_2_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_debounce_2_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_debounce_2_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_pixel_pusher_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_pixel_pusher_0_0_stub.vhdl:5' bound to instance 'pixel_pusher_0' of component 'design_1_pixel_pusher_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'design_1_pixel_pusher_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_pixel_pusher_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_vga_ctrl_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_vga_ctrl_0_0_stub.vhdl:5' bound to instance 'vga_ctrl_0' of component 'design_1_vga_ctrl_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'design_1_vga_ctrl_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-26031-ece07/realtime/design_1_vga_ctrl_0_0_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (1#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (2#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:29]
+WARNING: [Synth 8-3331] design design_1 has unconnected port hcount_0[9]
+WARNING: [Synth 8-3331] design design_1 has unconnected port hcount_0[8]
+WARNING: [Synth 8-3331] design design_1 has unconnected port hcount_0[7]
+WARNING: [Synth 8-3331] design design_1 has unconnected port hcount_0[6]
+WARNING: [Synth 8-3331] design design_1 has unconnected port hcount_0[5]
+WARNING: [Synth 8-3331] design design_1 has unconnected port hcount_0[4]
+WARNING: [Synth 8-3331] design design_1 has unconnected port hcount_0[3]
+WARNING: [Synth 8-3331] design design_1 has unconnected port hcount_0[2]
+WARNING: [Synth 8-3331] design design_1 has unconnected port hcount_0[1]
+WARNING: [Synth 8-3331] design design_1 has unconnected port hcount_0[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1357.035 ; gain = 15.016 ; free physical = 7652 ; free virtual = 26420
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1357.035 ; gain = 15.016 ; free physical = 7652 ; free virtual = 26420
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1357.035 ; gain = 15.016 ; free physical = 7652 ; free virtual = 26420
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
