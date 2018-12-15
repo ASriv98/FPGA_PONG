@@ -10,32 +10,33 @@ use IEEE.NUMERIC_STD.ALL;
 entity pixel_pusher is
     Port ( clk    : in  STD_LOGIC;
            en     : in  STD_LOGIC;
-           vs     : in  STD_LOGIC;
-           r_in   : in  STD_LOGIC_VECTOR (4  downto 0);
-           b_in   : in  STD_LOGIC_VECTOR (4  downto 0);
-           g_in   : in  STD_LOGIC_VECTOR (5  downto 0);
+--           r_in   : in  STD_LOGIC_VECTOR (4  downto 0);
+--           b_in   : in  STD_LOGIC_VECTOR (4  downto 0);
+--           g_in   : in  STD_LOGIC_VECTOR (5  downto 0);
            hcount : in  STD_LOGIC_VECTOR (9  downto 0);
            vcount : in  STD_LOGIC_VECTOR (9  downto 0);
-           vid    : in  STD_LOGIC;
+--           frame  : in  STD_LOGIC;
            R      : out STD_LOGIC_VECTOR (4  downto 0);
            B      : out STD_LOGIC_VECTOR (4  downto 0);
-           G      : out STD_LOGIC_VECTOR (5  downto 0);
-           addr   : out STD_LOGIC_VECTOR (11 downto 0)
+           G      : out STD_LOGIC_VECTOR (5  downto 0)
            );
 end pixel_pusher;
 
 architecture Behavioral of pixel_pusher is
 
-
-signal address  : STD_LOGIC_VECTOR(11 downto 0):= (others => '0');
-
 begin
 
-process(clk) begin
-    if rising_edge(clk) and (en = '1') then
-            R         <= (others => '1');
-            B         <= (others => '0');
-            G         <= (others => '0');
-    end if;              
-end process;
+    process(clk) begin
+        if rising_edge(clk) and (en = '1') then
+            if unsigned(hcount) < 640 and unsigned(vcount) < 480 then
+                R         <= (others => '1');
+                B         <= (others => '0');
+                G         <= (others => '0');
+            else
+                R         <= (others => '0');
+                B         <= (others => '0');
+                G         <= (others => '0');
+            end if;            
+        end if;              
+    end process;
 end Behavioral;

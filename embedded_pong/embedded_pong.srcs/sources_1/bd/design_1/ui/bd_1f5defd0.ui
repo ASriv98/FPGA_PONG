@@ -1,0 +1,26 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port vga_hs -pg 1 -y -300 -defaultsOSRD
+preplace port vga_vs -pg 1 -y -280 -defaultsOSRD
+preplace port clk -pg 1 -y -130 -defaultsOSRD
+preplace portBus vga_b -pg 1 -y -50 -defaultsOSRD
+preplace portBus vga_r -pg 1 -y -70 -defaultsOSRD
+preplace portBus vga_g -pg 1 -y -30 -defaultsOSRD
+preplace inst clock_div_25_0 -pg 1 -lvl 1 -y 30 -defaultsOSRD
+preplace inst pixel_pusher_0 -pg 1 -lvl 2 -y -50 -defaultsOSRD
+preplace inst vga_ctrl_0 -pg 1 -lvl 2 -y -320 -defaultsOSRD
+preplace netloc vga_ctrl_0_hcount 1 1 2 240 -410 500
+preplace netloc clk_0_1 1 0 2 -10J -80 210J
+preplace netloc vga_ctrl_0_hs 1 2 1 500
+preplace netloc vga_ctrl_0_vcount 1 1 2 230 -420 510
+preplace netloc pixel_pusher_0_B 1 2 1 N
+preplace netloc vga_ctrl_0_vs 1 2 1 510
+preplace netloc pixel_pusher_0_R 1 2 1 N
+preplace netloc pixel_pusher_0_G 1 2 1 N
+preplace netloc clock_div_25_0_clk_div 1 1 1 220
+levelinfo -pg 1 -30 110 380 540 -top -460 -bot 200
+",
+}
+

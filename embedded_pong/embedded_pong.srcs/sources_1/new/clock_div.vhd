@@ -49,7 +49,6 @@ begin
     process (clock)
     begin
         if rising_edge(clock) then 
-            -- 115200
             if unsigned(count) < 4 then
                 count <= std_logic_vector(unsigned(count) + 1);
                 div <= '0';

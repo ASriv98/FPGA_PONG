@@ -8,7 +8,7 @@ set_property -dict { PACKAGE_PIN L16 IOSTANDARD LVCMOS33 } [get_ports { clk }];
 create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports { clk }];
 
 ##Buttons
-set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { btn0 }]; 
+#set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { btn0 }]; 
 
 ##VGA Connector
 set_property -dict { PACKAGE_PIN M19 IOSTANDARD LVCMOS33 } [get_ports { vga_r[0] }];
@@ -47,8 +47,8 @@ set_property -dict { PACKAGE_PIN P19 IOSTANDARD LVCMOS33 } [get_ports vga_hs];
 #IO_L13N_T2_MRCC_34 Sch=VGA_HS
 set_property -dict { PACKAGE_PIN R19 IOSTANDARD LVCMOS33 } [get_ports vga_vs]; #IO_0_34Sch=VGA_VS
 
-##UART
-set_property -dict { PACKAGE_PIN T20 IOSTANDARD LVCMOS33 } [get_ports { RTS }];
-set_property -dict { PACKAGE_PIN U20 IOSTANDARD LVCMOS33 } [get_ports { RXD }];
-set_property -dict { PACKAGE_PIN V20 IOSTANDARD LVCMOS33 } [get_ports { TXD }];
-set_property -dict { PACKAGE_PIN W20 IOSTANDARD LVCMOS33 } [get_ports { CTS }];
+###UART
+#set_property -dict { PACKAGE_PIN T20 IOSTANDARD LVCMOS33 } [get_ports { RTS }];
+#set_property -dict { PACKAGE_PIN U20 IOSTANDARD LVCMOS33 } [get_ports { RXD }];
+#set_property -dict { PACKAGE_PIN V20 IOSTANDARD LVCMOS33 } [get_ports { TXD }];
+#set_property -dict { PACKAGE_PIN W20 IOSTANDARD LVCMOS33 } [get_ports { CTS }];

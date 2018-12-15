@@ -37,7 +37,7 @@ entity controller is
        en         : in  STD_LOGIC;
        hcount     : in  STD_LOGIC_VECTOR (9  downto 0);
        vcount     : in  STD_LOGIC_VECTOR (9  downto 0);
-       vid        : in  STD_LOGIC;
+       frame      : in  STD_LOGIC;
        btn_up     : in  STD_LOGIC;
        btn_down   : in  STD_LOGIC;
        btn_reset  : in  STD_LOGIC;
@@ -49,11 +49,26 @@ end controller;
 
 architecture Behavioral of controller is
 
+signal paddle1_y : integer range 0 to 767 := 100;
+
+signal ball_x : integer range 0 to 1023 := 512;
+signal ball_y : integer range 0 to 767 := 348;
+
+
 begin
 
 reset: process(clk) begin
     if rising_edge(clk) and (en = '1') then
-
+        if unsigned(hcount) >= 30 and unsigned(hcount) < 40 then
+--            if unsigned(vcount) 
+            r_out <= (others => '1');
+            g_out <= (others => '1');
+            b_out <= (others => '1');
+        else
+            r_out <= (others => '0');
+            g_out <= (others => '0');
+            b_out <= (others => '0');
+        end if;
     end if;
 end process;
 
@@ -70,13 +85,13 @@ draw_ball: process(clk) begin
 end process;
 
 move_paddle: process(clk) begin
-    if rising_edge(clk) and (en = '1') then
+    if rising_edge(clk) and (en = '1') and (frame = '1') then
 
     end if;
 end process;
 
 move_ball: process(clk) begin
-    if rising_edge(clk) and (en = '1') then
+    if rising_edge(clk) and (en = '1') and (frame = '1') then
 
     end if;
 end process;
