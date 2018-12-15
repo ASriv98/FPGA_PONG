@@ -14,37 +14,43 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25376 
+INFO: Helper process launched with PID 32124 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1286.902 ; gain = 86.891 ; free physical = 6797 ; free virtual = 25565
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1286.902 ; gain = 86.891 ; free physical = 7317 ; free virtual = 26132
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_controller_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/synth/design_1_controller_0_0.vhd:72]
 INFO: [Synth 8-3491] module 'controller' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:34' bound to instance 'U0' of component 'controller' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/synth/design_1_controller_0_0.vhd:105]
 INFO: [Synth 8-638] synthesizing module 'controller' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:50]
-WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:66]
-WARNING: [Synth 8-614] signal 'frame' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:86]
+WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:74]
 WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:86]
+WARNING: [Synth 8-3848] Net b_sig in module/entity controller does not have driver. [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:58]
 INFO: [Synth 8-256] done synthesizing module 'controller' (1#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:50]
 INFO: [Synth 8-256] done synthesizing module 'design_1_controller_0_0' (2#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/synth/design_1_controller_0_0.vhd:72]
+WARNING: [Synth 8-3331] design controller has unconnected port b_out[4]
+WARNING: [Synth 8-3331] design controller has unconnected port b_out[3]
+WARNING: [Synth 8-3331] design controller has unconnected port b_out[2]
+WARNING: [Synth 8-3331] design controller has unconnected port b_out[1]
+WARNING: [Synth 8-3331] design controller has unconnected port b_out[0]
+WARNING: [Synth 8-3331] design controller has unconnected port frame
 WARNING: [Synth 8-3331] design controller has unconnected port btn_up
 WARNING: [Synth 8-3331] design controller has unconnected port btn_down
 WARNING: [Synth 8-3331] design controller has unconnected port btn_reset
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.527 ; gain = 131.516 ; free physical = 6867 ; free virtual = 25635
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.527 ; gain = 131.516 ; free physical = 7330 ; free virtual = 26145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.527 ; gain = 131.516 ; free physical = 6851 ; free virtual = 25619
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.527 ; gain = 131.516 ; free physical = 7330 ; free virtual = 26145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.527 ; gain = 131.516 ; free physical = 6851 ; free virtual = 25619
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.527 ; gain = 131.516 ; free physical = 7330 ; free virtual = 26145
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1339.535 ; gain = 139.523 ; free physical = 6833 ; free virtual = 25601
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1339.535 ; gain = 139.523 ; free physical = 7320 ; free virtual = 26135
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -87,11 +93,17 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port b_out[4]
+WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port b_out[3]
+WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port b_out[2]
+WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port b_out[1]
+WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port b_out[0]
+WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port frame
 WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port btn_up
 WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port btn_down
 WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port btn_reset
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6240 ; free virtual = 25008
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7167 ; free virtual = 25982
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -104,7 +116,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6238 ; free virtual = 25006
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7167 ; free virtual = 25982
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -116,7 +128,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6237 ; free virtual = 25005
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7166 ; free virtual = 25981
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,42 +152,20 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6222 ; free virtual = 24990
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-3352] multi-driven net r_out[4] with 1st driver pin 'U0/r_out_reg[4]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net r_out[4] with 2nd driver pin 'U0/r_out_reg[4]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:89]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net r_out[3] with 1st driver pin 'U0/r_out_reg[3]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net r_out[3] with 2nd driver pin 'U0/r_out_reg[3]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:89]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net r_out[2] with 1st driver pin 'U0/r_out_reg[2]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net r_out[2] with 2nd driver pin 'U0/r_out_reg[2]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:89]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net r_out[1] with 1st driver pin 'U0/r_out_reg[1]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net r_out[1] with 2nd driver pin 'U0/r_out_reg[1]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:89]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net r_out[0] with 1st driver pin 'U0/r_out_reg[0]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net r_out[0] with 2nd driver pin 'U0/r_out_reg[0]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:89]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net b_out[4] with 1st driver pin 'U0/b_out_reg[4]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:71]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net b_out[4] with 2nd driver pin 'U0/b_out_reg[4]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:91]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net b_out[3] with 1st driver pin 'U0/b_out_reg[3]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:71]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net b_out[3] with 2nd driver pin 'U0/b_out_reg[3]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:91]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net b_out[2] with 1st driver pin 'U0/b_out_reg[2]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:71]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net b_out[2] with 2nd driver pin 'U0/b_out_reg[2]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:91]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net b_out[1] with 1st driver pin 'U0/b_out_reg[1]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:71]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net b_out[1] with 2nd driver pin 'U0/b_out_reg[1]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:91]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net b_out[0] with 1st driver pin 'U0/b_out_reg[0]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:71]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net b_out[0] with 2nd driver pin 'U0/b_out_reg[0]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:91]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net g_out[0] with 1st driver pin 'U0/g_out_reg[0]/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:90]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net g_out[0] with 2nd driver pin 'U0/g_out_reg[0]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:70]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|       11|Failed |Multi driven nets |
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6222 ; free virtual = 24990
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -187,25 +177,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6221 ; free virtual = 24989
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6221 ; free virtual = 24989
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6221 ; free virtual = 24989
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6221 ; free virtual = 24989
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -223,24 +213,25 @@ Report Cell Usage:
 +------+-----+------+
 |1     |LUT2 |     1|
 |2     |LUT3 |     1|
-|3     |LUT5 |     5|
-|4     |LUT6 |     4|
-|5     |FDRE |    22|
+|3     |LUT4 |     1|
+|4     |LUT5 |     3|
+|5     |LUT6 |     5|
+|6     |FDRE |     2|
 +------+-----+------+
 
 Report Instance Areas: 
 +------+---------+-----------+------+
 |      |Instance |Module     |Cells |
 +------+---------+-----------+------+
-|1     |top      |           |    33|
-|2     |  U0     |controller |    33|
+|1     |top      |           |    13|
+|2     |  U0     |controller |    13|
 +------+---------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6221 ; free virtual = 24989
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 22 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.895 ; gain = 256.883 ; free physical = 6221 ; free virtual = 24989
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1456.902 ; gain = 256.883 ; free physical = 6221 ; free virtual = 24989
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7167 ; free virtual = 25983
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.910 ; gain = 256.891 ; free physical = 7167 ; free virtual = 25983
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -248,15 +239,15 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-12 Infos, 9 Warnings, 22 Critical Warnings and 0 Errors encountered.
+12 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:27 . Memory (MB): peak = 1535.895 ; gain = 348.445 ; free physical = 6117 ; free virtual = 24885
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1591.930 ; gain = 404.480 ; free physical = 7134 ; free virtual = 25949
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/design_1_controller_0_0_synth_1/design_1_controller_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 2028.500 ; gain = 492.605 ; free physical = 4648 ; free virtual = 23416
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 2053.527 ; gain = 461.598 ; free physical = 6774 ; free virtual = 25589
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/design_1_controller_0_0_synth_1/design_1_controller_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_controller_0_0_utilization_synth.rpt -pb design_1_controller_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2028.500 ; gain = 0.000 ; free physical = 5479 ; free virtual = 24247
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 17:20:47 2018...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2053.527 ; gain = 0.000 ; free physical = 6770 ; free virtual = 25585
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 17:39:00 2018...

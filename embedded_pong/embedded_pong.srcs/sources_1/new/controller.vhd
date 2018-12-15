@@ -41,9 +41,9 @@ entity controller is
        btn_up     : in  STD_LOGIC;
        btn_down   : in  STD_LOGIC;
        btn_reset  : in  STD_LOGIC;
-       r_out      : out STD_LOGIC_VECTOR (4  downto 0);
-       b_out      : out STD_LOGIC_VECTOR (4  downto 0);
-       g_out      : out STD_LOGIC_VECTOR (5  downto 0)
+       r_out      : out STD_LOGIC_VECTOR (4  downto 0) := (others => '0');
+       b_out      : out STD_LOGIC_VECTOR (4  downto 0) := (others => '0');
+       g_out      : out STD_LOGIC_VECTOR (5  downto 0) := (others => '0')
        );
 end controller;
 
@@ -54,8 +54,16 @@ signal paddle1_y : integer range 0 to 767 := 100;
 signal ball_x : integer range 0 to 1023 := 512;
 signal ball_y : integer range 0 to 767 := 348;
 
+signal r_sig : STD_LOGIC_VECTOR (4  downto 0) := (others => '0');
+signal b_sig : STD_LOGIC_VECTOR (4  downto 0) := (others => '0');
+signal g_sig : STD_LOGIC_VECTOR (5  downto 0) := (others => '0');
+
 
 begin
+
+r_out <= r_sig;
+g_out <= g_sig;
+b_out <= b_sig;
 
 reset: process(clk) begin
     if rising_edge(clk) and (en = '1') then
@@ -66,34 +74,34 @@ end process;
 draw_paddle: process(clk) begin
     if rising_edge(clk) and (en = '1') then
         if unsigned(hcount) >= 30 and unsigned(hcount) < 40 and unsigned(vcount) >= paddle1_y and unsigned(vcount) <= paddle1_y + 50 then
-            r_out <= (others => '1');
-            g_out <= (others => '1');
-            b_out <= (others => '1');
+            r_sig <= (others => '1');
+--            b_sig <= (others => '1');
+--            g_sig <= (others => '1');
         else
-            r_out <= (others => '0');
-            g_out <= (others => '0');
-            b_out <= (others => '0');
+            r_sig <= (others => '0');
+--            g_sig <= (others => '0');
+--            b_sig <= (others => '0');
         end if;
     end if;
 end process;
 
 draw_ball: process(clk) begin
     if rising_edge(clk) and (en = '1') then
-
+        if unsigned(hcount) >= ball_x and unsigned(hcount) < ball_x + 5 and unsigned(vcount) >= ball_y and unsigned(vcount) <= ball_y + 5 then
+--            r_sig <= (others => '1');
+--            b_sig <= (others => '1');
+            g_sig <= (others => '1');
+        else
+--            r_sig <= (others => '0');
+            g_sig <= (others => '0');
+--            b_sig <= (others => '0');
+        end if;
     end if;
 end process;
 
 move_paddle: process(clk) begin
     if rising_edge(clk) and (en = '1') and (frame = '1') then
-        if unsigned(hcount) >= ball_x and unsigned(hcount) < ball_x + 5 and unsigned(vcount) >= ball_y and unsigned(vcount) <= ball_y + 5 then
-            r_out <= (others => '1');
-            g_out <= (others => '1');
-            b_out <= (others => '1');
-        else
-            r_out <= (others => '0');
-            g_out <= (others => '0');
-            b_out <= (others => '0');
-        end if;
+
     end if;
 end process;
 

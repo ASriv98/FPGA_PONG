@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
---Date        : Sat Dec 15 17:19:37 2018
+--Date        : Sat Dec 15 17:38:00 2018
 --Host        : ece07 running 64-bit Ubuntu 16.04.5 LTS
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -17,7 +17,6 @@ entity design_1 is
     btn2 : in STD_LOGIC;
     btn3 : in STD_LOGIC;
     clk : in STD_LOGIC;
-    hcount_0 : in STD_LOGIC_VECTOR ( 9 downto 0 );
     vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
     vga_hs : out STD_LOGIC;

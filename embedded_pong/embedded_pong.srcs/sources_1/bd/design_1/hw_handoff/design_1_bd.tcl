@@ -168,7 +168,6 @@ proc create_root_design { parentCell } {
   set btn2 [ create_bd_port -dir I btn2 ]
   set btn3 [ create_bd_port -dir I btn3 ]
   set clk [ create_bd_port -dir I -type clk clk ]
-  set hcount_0 [ create_bd_port -dir I -from 9 -to 0 hcount_0 ]
   set vga_b [ create_bd_port -dir O -from 4 -to 0 vga_b ]
   set vga_g [ create_bd_port -dir O -from 5 -to 0 vga_g ]
   set vga_hs [ create_bd_port -dir O vga_hs ]
