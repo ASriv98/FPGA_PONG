@@ -32,19 +32,6 @@ signal address  : STD_LOGIC_VECTOR(11 downto 0):= (others => '0');
 begin
 
 process(clk) begin
-  if rising_edge(clk) and (en = '1') then
-        if vid = '1' and (unsigned(hcount) < 64) and (unsigned(vcount) < 64) then
-            address <= STD_LOGIC_VECTOR(unsigned(address) + 1);
-        elsif (vs = '0') then
-            address   <= (others => '0');
-        end if;
-    end if;
-
-end process;
-
-addr <= address;
-
-process(clk) begin
     if rising_edge(clk) and (en = '1') then
             R         <= (others => '1');
             B         <= (others => '0');
