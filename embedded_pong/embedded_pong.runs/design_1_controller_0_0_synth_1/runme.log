@@ -14,43 +14,41 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 32124 
+INFO: Helper process launched with PID 3859 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1286.902 ; gain = 86.891 ; free physical = 7317 ; free virtual = 26132
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1286.898 ; gain = 86.891 ; free physical = 6417 ; free virtual = 25194
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_controller_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/synth/design_1_controller_0_0.vhd:72]
-INFO: [Synth 8-3491] module 'controller' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:34' bound to instance 'U0' of component 'controller' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/synth/design_1_controller_0_0.vhd:105]
-INFO: [Synth 8-638] synthesizing module 'controller' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:50]
-WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:74]
-WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:86]
-WARNING: [Synth 8-3848] Net b_sig in module/entity controller does not have driver. [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:58]
-INFO: [Synth 8-256] done synthesizing module 'controller' (1#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'design_1_controller_0_0' (2#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/synth/design_1_controller_0_0.vhd:72]
-WARNING: [Synth 8-3331] design controller has unconnected port b_out[4]
-WARNING: [Synth 8-3331] design controller has unconnected port b_out[3]
-WARNING: [Synth 8-3331] design controller has unconnected port b_out[2]
-WARNING: [Synth 8-3331] design controller has unconnected port b_out[1]
-WARNING: [Synth 8-3331] design controller has unconnected port b_out[0]
-WARNING: [Synth 8-3331] design controller has unconnected port frame
-WARNING: [Synth 8-3331] design controller has unconnected port btn_up
-WARNING: [Synth 8-3331] design controller has unconnected port btn_down
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/synth/design_1_controller_0_0.vhd:74]
+INFO: [Synth 8-3491] module 'controller' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:34' bound to instance 'U0' of component 'controller' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/synth/design_1_controller_0_0.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'controller' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:52]
+WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:78]
+WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:89]
+WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:108]
+WARNING: [Synth 8-614] signal 'frame' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:122]
+WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:122]
+WARNING: [Synth 8-614] signal 'frame' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:151]
+WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:151]
+INFO: [Synth 8-256] done synthesizing module 'controller' (1#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'design_1_controller_0_0' (2#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/synth/design_1_controller_0_0.vhd:74]
 WARNING: [Synth 8-3331] design controller has unconnected port btn_reset
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.527 ; gain = 131.516 ; free physical = 7330 ; free virtual = 26145
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.523 ; gain = 131.516 ; free physical = 6388 ; free virtual = 25165
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.527 ; gain = 131.516 ; free physical = 7330 ; free virtual = 26145
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.523 ; gain = 131.516 ; free physical = 6424 ; free virtual = 25201
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.527 ; gain = 131.516 ; free physical = 7330 ; free virtual = 26145
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1331.523 ; gain = 131.516 ; free physical = 6425 ; free virtual = 25202
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:110]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:110]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1339.535 ; gain = 139.523 ; free physical = 7320 ; free virtual = 26135
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1339.531 ; gain = 139.523 ; free physical = 6428 ; free virtual = 25205
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -63,8 +61,16 @@ No constraint files found.
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 2     
 +---Registers : 
-	                1 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -74,8 +80,16 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module controller 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 2     
 +---Registers : 
-	                1 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -93,17 +107,381 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port b_out[4]
-WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port b_out[3]
-WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port b_out[2]
-WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port b_out[1]
-WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port b_out[0]
-WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port frame
-WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port btn_up
-WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port btn_down
-WARNING: [Synth 8-3331] design design_1_controller_0_0 has unconnected port btn_reset
+WARNING: [Synth 8-3331] design controller has unconnected port btn_reset
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[0]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[1]' (FDSE) to 'U0/v_x_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[2]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[3]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[4]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[5]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[6]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[7]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[8]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[9]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[10]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[11]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[12]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[13]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[14]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[15]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[16]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[17]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[18]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[19]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[20]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[21]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[22]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[23]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[24]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[25]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[26]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[27]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[28]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[29]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[30]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_y_reg[31]' (FDRE) to 'U0/v_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[0]' (FDRE) to 'U0/v_x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[1]' (FDSE) to 'U0/v_x_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/v_x_reg[2] )
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[3]' (FDRE) to 'U0/v_x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[4]' (FDRE) to 'U0/v_x_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[5]' (FDRE) to 'U0/v_x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[6]' (FDRE) to 'U0/v_x_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[7]' (FDRE) to 'U0/v_x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[8]' (FDRE) to 'U0/v_x_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[9]' (FDRE) to 'U0/v_x_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[10]' (FDRE) to 'U0/v_x_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[11]' (FDRE) to 'U0/v_x_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[12]' (FDRE) to 'U0/v_x_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[13]' (FDRE) to 'U0/v_x_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[14]' (FDRE) to 'U0/v_x_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[15]' (FDRE) to 'U0/v_x_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[16]' (FDRE) to 'U0/v_x_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[17]' (FDRE) to 'U0/v_x_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[18]' (FDRE) to 'U0/v_x_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[19]' (FDRE) to 'U0/v_x_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[20]' (FDRE) to 'U0/v_x_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[21]' (FDRE) to 'U0/v_x_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[22]' (FDRE) to 'U0/v_x_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[23]' (FDRE) to 'U0/v_x_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[24]' (FDRE) to 'U0/v_x_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[25]' (FDRE) to 'U0/v_x_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[26]' (FDRE) to 'U0/v_x_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[27]' (FDRE) to 'U0/v_x_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[28]' (FDRE) to 'U0/v_x_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[29]' (FDRE) to 'U0/v_x_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/v_x_reg[30]' (FDRE) to 'U0/v_x_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/v_x_reg[31] )
+INFO: [Synth 8-3886] merging instance 'U0/r_sig_reg[0]' (FDSE) to 'U0/r_sig_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/r_sig_reg[1]' (FDSE) to 'U0/r_sig_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/r_sig_reg[2]' (FDSE) to 'U0/r_sig_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/r_sig_reg[3]' (FDSE) to 'U0/r_sig_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/ball_up_reg )
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[31]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[30]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[29]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[28]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[27]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[26]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[25]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[24]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[23]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[22]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[21]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[20]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[19]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[18]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[17]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[16]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[15]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[14]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[13]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[12]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[11]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[10]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[9]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[7]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[1]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[0]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[31]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[31]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[30]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[30]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[29]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[29]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[28]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[28]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[27]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[27]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[26]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[26]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[25]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[25]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[24]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[24]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[23]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[23]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[22]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[22]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[21]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[21]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[20]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[20]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[19]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[19]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[18]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[18]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[17]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[17]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[16]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[16]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[15]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[15]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[14]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[14]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[13]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[13]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[12]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[12]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[11]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[11]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[10]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[10]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[9]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[9]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[7]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[7]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[1]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[1]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle1_y_reg[0]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle1_y_reg[0]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[31]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[30]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[29]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[28]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[27]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[26]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[25]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[24]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[23]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[22]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[21]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[20]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[19]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[18]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[17]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[16]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[15]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[14]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[13]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[12]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[11]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[10]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[9]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[7]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[1]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[0]) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[31]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[31]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[30]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[30]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[29]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[29]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[28]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[28]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[27]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[27]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[26]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[26]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[25]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[25]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[24]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[24]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[23]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[23]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[22]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[22]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[21]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[21]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[20]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[20]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[19]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[19]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[18]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[18]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[17]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[17]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[16]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[16]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[15]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[15]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[14]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[14]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[13]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[13]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[12]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[12]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[11]__0) is unused and will be removed from module design_1_controller_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[11]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-3332] Sequential element (U0/paddle2_y_reg[10]__0) is unused and will be removed from module design_1_controller_0_0.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[10]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[9]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'U0/paddle2_y_reg[7]__0/Q' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Common 17-14] Message 'Synth 8-3352' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:81]
+INFO: [Common 17-14] Message 'Synth 8-5559' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7167 ; free virtual = 25982
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6121 ; free virtual = 24898
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -116,7 +494,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7167 ; free virtual = 25982
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6119 ; free virtual = 24896
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -127,8 +505,16 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5966] Removing register instance (\U0/paddle1_y_reg[8] ) from module (design_1_controller_0_0) as it has self-loop and (\U0/paddle1_y_reg[8]__0 ) is actual driver [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:91]
+INFO: [Synth 8-5966] Removing register instance (\U0/paddle2_y_reg[8] ) from module (design_1_controller_0_0) as it has self-loop and (\U0/paddle2_y_reg[8]__0 ) is actual driver [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:95]
+INFO: [Synth 8-5966] Removing register instance (\U0/paddle1_y_reg[5]__0 ) from module (design_1_controller_0_0) as it has self-loop and (\U0/paddle1_y_reg[5] ) is actual driver [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-5966] Removing register instance (\U0/paddle1_y_reg[4]__0 ) from module (design_1_controller_0_0) as it has self-loop and (\U0/paddle1_y_reg[4] ) is actual driver [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-5966] Removing register instance (\U0/paddle1_y_reg[3]__0 ) from module (design_1_controller_0_0) as it has self-loop and (\U0/paddle1_y_reg[3] ) is actual driver [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:82]
+INFO: [Synth 8-5966] Removing register instance (\U0/paddle2_y_reg[5]__0 ) from module (design_1_controller_0_0) as it has self-loop and (\U0/paddle2_y_reg[5] ) is actual driver [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-5966] Removing register instance (\U0/paddle2_y_reg[4]__0 ) from module (design_1_controller_0_0) as it has self-loop and (\U0/paddle2_y_reg[4] ) is actual driver [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
+INFO: [Synth 8-5966] Removing register instance (\U0/paddle2_y_reg[3]__0 ) from module (design_1_controller_0_0) as it has self-loop and (\U0/paddle2_y_reg[3] ) is actual driver [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/controller.vhd:83]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7166 ; free virtual = 25981
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6118 ; free virtual = 24895
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -152,7 +538,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6116 ; free virtual = 24893
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -165,7 +551,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6116 ; free virtual = 24893
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -177,25 +563,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6116 ; free virtual = 24893
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6116 ; free virtual = 24893
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6116 ; free virtual = 24893
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6116 ; free virtual = 24893
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -208,46 +594,51 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |LUT2 |     1|
-|2     |LUT3 |     1|
-|3     |LUT4 |     1|
-|4     |LUT5 |     3|
-|5     |LUT6 |     5|
-|6     |FDRE |     2|
-+------+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    20|
+|2     |LUT1   |    10|
+|3     |LUT2   |    47|
+|4     |LUT3   |    18|
+|5     |LUT4   |    10|
+|6     |LUT5   |     3|
+|7     |LUT6   |     5|
+|8     |FDRE   |     8|
+|9     |FDSE   |     2|
++------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-----------+------+
 |      |Instance |Module     |Cells |
 +------+---------+-----------+------+
-|1     |top      |           |    13|
-|2     |  U0     |controller |    13|
+|1     |top      |           |   123|
+|2     |  U0     |controller |   123|
 +------+---------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7165 ; free virtual = 25981
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6116 ; free virtual = 24893
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.902 ; gain = 256.891 ; free physical = 7167 ; free virtual = 25983
-Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1456.910 ; gain = 256.891 ; free physical = 7167 ; free virtual = 25983
+Synthesis finished with 0 errors, 360 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1457.133 ; gain = 257.125 ; free physical = 6117 ; free virtual = 24894
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1457.141 ; gain = 257.125 ; free physical = 6117 ; free virtual = 24893
 INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-12 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+196 Infos, 9 Warnings, 200 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1591.930 ; gain = 404.480 ; free physical = 7134 ; free virtual = 25949
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 1535.133 ; gain = 347.688 ; free physical = 6062 ; free virtual = 24839
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/design_1_controller_0_0_synth_1/design_1_controller_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 2053.527 ; gain = 461.598 ; free physical = 6774 ; free virtual = 25589
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 2014.738 ; gain = 479.605 ; free physical = 5325 ; free virtual = 24102
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/design_1_controller_0_0_synth_1/design_1_controller_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_controller_0_0_utilization_synth.rpt -pb design_1_controller_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2053.527 ; gain = 0.000 ; free physical = 6770 ; free virtual = 25585
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 17:39:00 2018...
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2015.738 ; gain = 0.000 ; free physical = 5316 ; free virtual = 24093
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 19:15:53 2018...

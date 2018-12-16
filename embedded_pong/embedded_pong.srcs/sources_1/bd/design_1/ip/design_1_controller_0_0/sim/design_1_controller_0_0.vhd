@@ -62,6 +62,8 @@ ENTITY design_1_controller_0_0 IS
     frame : IN STD_LOGIC;
     btn_up : IN STD_LOGIC;
     btn_down : IN STD_LOGIC;
+    btn_up2 : IN STD_LOGIC;
+    btn_down2 : IN STD_LOGIC;
     btn_reset : IN STD_LOGIC;
     r_out : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
     b_out : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
@@ -81,6 +83,8 @@ ARCHITECTURE design_1_controller_0_0_arch OF design_1_controller_0_0 IS
       frame : IN STD_LOGIC;
       btn_up : IN STD_LOGIC;
       btn_down : IN STD_LOGIC;
+      btn_up2 : IN STD_LOGIC;
+      btn_down2 : IN STD_LOGIC;
       btn_reset : IN STD_LOGIC;
       r_out : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
       b_out : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
@@ -105,6 +109,8 @@ BEGIN
       frame => frame,
       btn_up => btn_up,
       btn_down => btn_down,
+      btn_up2 => btn_up2,
+      btn_down2 => btn_down2,
       btn_reset => btn_reset,
       r_out => r_out,
       b_out => b_out,

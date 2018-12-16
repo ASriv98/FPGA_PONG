@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
---Date        : Sat Dec 15 17:38:00 2018
+--Date        : Sat Dec 15 19:14:49 2018
 --Host        : ece07 running 64-bit Ubuntu 16.04.5 LTS
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -14,8 +14,10 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1 is
   port (
     btn0 : in STD_LOGIC;
+    btn1 : in STD_LOGIC;
     btn2 : in STD_LOGIC;
     btn3 : in STD_LOGIC;
+    btnr : in STD_LOGIC;
     clk : in STD_LOGIC;
     vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -24,7 +26,7 @@ entity design_1 is
     vga_vs : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=7,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=9,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=9,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -82,6 +84,20 @@ architecture STRUCTURE of design_1 is
     dbnc : out STD_LOGIC
   );
   end component design_1_debounce_2_0;
+  component design_1_debounce_3_0 is
+  port (
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC;
+    dbnc : out STD_LOGIC
+  );
+  end component design_1_debounce_3_0;
+  component design_1_debounce_4_0 is
+  port (
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC;
+    dbnc : out STD_LOGIC
+  );
+  end component design_1_debounce_4_0;
   component design_1_controller_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -91,6 +107,8 @@ architecture STRUCTURE of design_1 is
     frame : in STD_LOGIC;
     btn_up : in STD_LOGIC;
     btn_down : in STD_LOGIC;
+    btn_up2 : in STD_LOGIC;
+    btn_down2 : in STD_LOGIC;
     btn_reset : in STD_LOGIC;
     r_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
     b_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -101,6 +119,8 @@ architecture STRUCTURE of design_1 is
   signal btn0_1 : STD_LOGIC;
   signal btn2_1 : STD_LOGIC;
   signal btn3_1 : STD_LOGIC;
+  signal btn_0_1 : STD_LOGIC;
+  signal btn_0_2 : STD_LOGIC;
   signal clk_0_1 : STD_LOGIC;
   signal controller_0_b_out : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal controller_0_g_out : STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -108,6 +128,8 @@ architecture STRUCTURE of design_1 is
   signal debounce_0_dbnc : STD_LOGIC;
   signal debounce_1_dbnc : STD_LOGIC;
   signal debounce_2_dbnc : STD_LOGIC;
+  signal debounce_3_dbnc : STD_LOGIC;
+  signal debounce_4_dbnc : STD_LOGIC;
   signal pixel_pusher_0_B : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal pixel_pusher_0_G : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal pixel_pusher_0_R : STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -126,6 +148,8 @@ begin
   btn0_1 <= btn0;
   btn2_1 <= btn2;
   btn3_1 <= btn3;
+  btn_0_1 <= btn1;
+  btn_0_2 <= btnr;
   clk_0_1 <= clk;
   vga_b(4 downto 0) <= pixel_pusher_0_B(4 downto 0);
   vga_g(5 downto 0) <= pixel_pusher_0_G(5 downto 0);
@@ -141,8 +165,10 @@ controller_0: component design_1_controller_0_0
      port map (
       b_out(4 downto 0) => controller_0_b_out(4 downto 0),
       btn_down => debounce_1_dbnc,
-      btn_reset => debounce_0_dbnc,
+      btn_down2 => debounce_0_dbnc,
+      btn_reset => debounce_4_dbnc,
       btn_up => debounce_2_dbnc,
+      btn_up2 => debounce_3_dbnc,
       clk => clk_0_1,
       en => Net,
       frame => vga_ctrl_0_frame1,
@@ -168,6 +194,18 @@ debounce_2: component design_1_debounce_2_0
       btn => btn3_1,
       clk => clk_0_1,
       dbnc => debounce_2_dbnc
+    );
+debounce_3: component design_1_debounce_3_0
+     port map (
+      btn => btn_0_1,
+      clk => clk_0_1,
+      dbnc => debounce_3_dbnc
+    );
+debounce_4: component design_1_debounce_4_0
+     port map (
+      btn => btn_0_2,
+      clk => clk_0_1,
+      dbnc => debounce_4_dbnc
     );
 pixel_pusher_0: component design_1_pixel_pusher_0_0
      port map (
