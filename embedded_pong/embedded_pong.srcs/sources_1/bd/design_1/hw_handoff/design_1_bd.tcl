@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# clock_div_25, controller, debounce, debounce, debounce, debounce, pixel_pusher, vga_ctrl
+# clock_div_25, controller, debounce, debounce, debounce, debounce, pixel_pusher, ssd_out, vga_ctrl
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -164,11 +164,21 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
+  set AA [ create_bd_port -dir O AA ]
+  set AB [ create_bd_port -dir O AB ]
+  set AC [ create_bd_port -dir O AC ]
+  set AD [ create_bd_port -dir O AD ]
+  set AE [ create_bd_port -dir O AE ]
+  set AF [ create_bd_port -dir O AF ]
+  set AG [ create_bd_port -dir O AG ]
+  set C [ create_bd_port -dir O C ]
   set btn0 [ create_bd_port -dir I -type rst btn0 ]
   set btn1 [ create_bd_port -dir I btn1 ]
   set btn2 [ create_bd_port -dir I btn2 ]
   set btn3 [ create_bd_port -dir I btn3 ]
   set clk [ create_bd_port -dir I -type clk clk ]
+  set sw2 [ create_bd_port -dir I -type rst sw2 ]
+  set sw3 [ create_bd_port -dir I sw3 ]
   set vga_b [ create_bd_port -dir O -from 4 -to 0 vga_b ]
   set vga_g [ create_bd_port -dir O -from 5 -to 0 vga_g ]
   set vga_hs [ create_bd_port -dir O vga_hs ]
@@ -252,6 +262,17 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: ssd_out_0, and set properties
+  set block_name ssd_out
+  set block_cell_name ssd_out_0
+  if { [catch {set ssd_out_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $ssd_out_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: vga_ctrl_0, and set properties
   set block_name vga_ctrl
   set block_cell_name vga_ctrl_0
@@ -265,14 +286,17 @@ proc create_root_design { parentCell } {
   
   # Create port connections
   connect_bd_net -net Net [get_bd_pins clock_div_25_0/clk_div] [get_bd_pins controller_0/en] [get_bd_pins pixel_pusher_0/en] [get_bd_pins vga_ctrl_0/en]
+  connect_bd_net -net ai_mode_0_1 [get_bd_ports sw3] [get_bd_pins controller_0/ai_mode]
   connect_bd_net -net btn0_1 [get_bd_ports btn0] [get_bd_pins debounce_0/btn]
   connect_bd_net -net btn2_1 [get_bd_ports btn2] [get_bd_pins debounce_1/btn]
   connect_bd_net -net btn3_1 [get_bd_ports btn3] [get_bd_pins debounce_2/btn]
   connect_bd_net -net btn_0_1 [get_bd_ports btn1] [get_bd_pins debounce_3/btn]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins clock_div_25_0/clock] [get_bd_pins controller_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins debounce_1/clk] [get_bd_pins debounce_2/clk] [get_bd_pins debounce_3/clk] [get_bd_pins pixel_pusher_0/clk] [get_bd_pins vga_ctrl_0/clk]
+  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins clock_div_25_0/clock] [get_bd_pins controller_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins debounce_1/clk] [get_bd_pins debounce_2/clk] [get_bd_pins debounce_3/clk] [get_bd_pins pixel_pusher_0/clk] [get_bd_pins ssd_out_0/clk] [get_bd_pins vga_ctrl_0/clk]
   connect_bd_net -net controller_0_b_out [get_bd_pins controller_0/b_out] [get_bd_pins pixel_pusher_0/b_in]
   connect_bd_net -net controller_0_g_out [get_bd_pins controller_0/g_out] [get_bd_pins pixel_pusher_0/g_in]
+  connect_bd_net -net controller_0_player [get_bd_pins controller_0/player] [get_bd_pins ssd_out_0/player]
   connect_bd_net -net controller_0_r_out [get_bd_pins controller_0/r_out] [get_bd_pins pixel_pusher_0/r_in]
+  connect_bd_net -net controller_0_score [get_bd_pins controller_0/score] [get_bd_pins ssd_out_0/value]
   connect_bd_net -net debounce_0_dbnc [get_bd_pins controller_0/btn_down2] [get_bd_pins debounce_0/dbnc]
   connect_bd_net -net debounce_1_dbnc [get_bd_pins controller_0/btn_down] [get_bd_pins debounce_1/dbnc]
   connect_bd_net -net debounce_2_dbnc [get_bd_pins controller_0/btn_up] [get_bd_pins debounce_2/dbnc]
@@ -280,6 +304,15 @@ proc create_root_design { parentCell } {
   connect_bd_net -net pixel_pusher_0_B [get_bd_ports vga_b] [get_bd_pins pixel_pusher_0/B]
   connect_bd_net -net pixel_pusher_0_G [get_bd_ports vga_g] [get_bd_pins pixel_pusher_0/G]
   connect_bd_net -net pixel_pusher_0_R [get_bd_ports vga_r] [get_bd_pins pixel_pusher_0/R]
+  connect_bd_net -net ssd_out_0_AA [get_bd_ports AA] [get_bd_pins ssd_out_0/AA]
+  connect_bd_net -net ssd_out_0_AB [get_bd_ports AB] [get_bd_pins ssd_out_0/AB]
+  connect_bd_net -net ssd_out_0_AC [get_bd_ports AC] [get_bd_pins ssd_out_0/AC]
+  connect_bd_net -net ssd_out_0_AD [get_bd_ports AD] [get_bd_pins ssd_out_0/AD]
+  connect_bd_net -net ssd_out_0_AE [get_bd_ports AE] [get_bd_pins ssd_out_0/AE]
+  connect_bd_net -net ssd_out_0_AF [get_bd_ports AF] [get_bd_pins ssd_out_0/AF]
+  connect_bd_net -net ssd_out_0_AG [get_bd_ports AG] [get_bd_pins ssd_out_0/AG]
+  connect_bd_net -net ssd_out_0_C [get_bd_ports C] [get_bd_pins ssd_out_0/C]
+  connect_bd_net -net sw_reset_0_1 [get_bd_ports sw2] [get_bd_pins controller_0/sw_reset]
   connect_bd_net -net vga_ctrl_0_frame1 [get_bd_pins controller_0/frame] [get_bd_pins vga_ctrl_0/frame]
   connect_bd_net -net vga_ctrl_0_hcount [get_bd_pins controller_0/hcount] [get_bd_pins pixel_pusher_0/hcount] [get_bd_pins vga_ctrl_0/hcount]
   connect_bd_net -net vga_ctrl_0_hs [get_bd_ports vga_hs] [get_bd_pins vga_ctrl_0/hs]

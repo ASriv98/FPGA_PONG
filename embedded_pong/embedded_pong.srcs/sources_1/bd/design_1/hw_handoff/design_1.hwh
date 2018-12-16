@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 15 19:51:46 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 15 23:24:59 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -13,6 +13,7 @@
         <CONNECTION INSTANCE="debounce_1" PORT="clk"/>
         <CONNECTION INSTANCE="debounce_0" PORT="clk"/>
         <CONNECTION INSTANCE="debounce_3" PORT="clk"/>
+        <CONNECTION INSTANCE="ssd_out_0" PORT="clk"/>
         <CONNECTION INSTANCE="controller_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
@@ -41,11 +42,6 @@
         <CONNECTION INSTANCE="pixel_pusher_0" PORT="G"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="btn2" SIGIS="undef" SIGNAME="External_Ports_btn2">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="debounce_1" PORT="btn"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="btn0" SIGIS="rst" SIGNAME="External_Ports_btn0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="debounce_0" PORT="btn"/>
@@ -56,9 +52,64 @@
         <CONNECTION INSTANCE="debounce_2" PORT="btn"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="btn2" SIGIS="undef" SIGNAME="External_Ports_btn2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debounce_1" PORT="btn"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="btn1" SIGIS="undef" SIGNAME="External_Ports_btn1">
       <CONNECTIONS>
         <CONNECTION INSTANCE="debounce_3" PORT="btn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AA" SIGIS="undef" SIGNAME="ssd_out_0_AA">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_out_0" PORT="AA"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AB" SIGIS="undef" SIGNAME="ssd_out_0_AB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_out_0" PORT="AB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AC" SIGIS="undef" SIGNAME="ssd_out_0_AC">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_out_0" PORT="AC"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AD" SIGIS="undef" SIGNAME="ssd_out_0_AD">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_out_0" PORT="AD"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AE" SIGIS="undef" SIGNAME="ssd_out_0_AE">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_out_0" PORT="AE"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AF" SIGIS="undef" SIGNAME="ssd_out_0_AF">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_out_0" PORT="AF"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AG" SIGIS="undef" SIGNAME="ssd_out_0_AG">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_out_0" PORT="AG"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="C" SIGIS="undef" SIGNAME="ssd_out_0_C">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_out_0" PORT="C"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sw3" SIGIS="undef" SIGNAME="External_Ports_sw3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="controller_0" PORT="ai_mode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sw2" SIGIS="rst" SIGNAME="External_Ports_sw2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="controller_0" PORT="sw_reset"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -140,8 +191,16 @@
             <CONNECTION INSTANCE="debounce_0" PORT="dbnc"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" SIGIS="rst"/>
-        <PORT DIR="I" NAME="ai_mode" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sw_reset" SIGIS="rst" SIGNAME="External_Ports_sw2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sw2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ai_mode" SIGIS="undef" SIGNAME="External_Ports_sw3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sw3"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="4" NAME="r_out" RIGHT="0" SIGIS="undef" SIGNAME="controller_0_r_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pixel_pusher_0" PORT="r_in"/>
@@ -155,6 +214,16 @@
         <PORT DIR="O" LEFT="5" NAME="g_out" RIGHT="0" SIGIS="undef" SIGNAME="controller_0_g_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pixel_pusher_0" PORT="g_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="score" RIGHT="0" SIGIS="undef" SIGNAME="controller_0_score">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_out_0" PORT="value"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="player" SIGIS="undef" SIGNAME="controller_0_player">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_out_0" PORT="player"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -315,6 +384,71 @@
         <PORT DIR="O" LEFT="5" NAME="G" RIGHT="0" SIGIS="undef" SIGNAME="pixel_pusher_0_G">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="vga_g"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ssd_out_0" HWVERSION="1.0" INSTANCE="ssd_out_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_out" VLNV="xilinx.com:module_ref:ssd_out:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ssd_out_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="AA" SIGIS="undef" SIGNAME="ssd_out_0_AA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AB" SIGIS="undef" SIGNAME="ssd_out_0_AB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AC" SIGIS="undef" SIGNAME="ssd_out_0_AC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AD" SIGIS="undef" SIGNAME="ssd_out_0_AD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AE" SIGIS="undef" SIGNAME="ssd_out_0_AE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AF" SIGIS="undef" SIGNAME="ssd_out_0_AF">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AF"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AG" SIGIS="undef" SIGNAME="ssd_out_0_AG">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AG"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="C" SIGIS="undef" SIGNAME="ssd_out_0_C">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="C"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="value" RIGHT="0" SIGIS="undef" SIGNAME="controller_0_score">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controller_0" PORT="score"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="player" SIGIS="undef" SIGNAME="controller_0_player">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controller_0" PORT="player"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

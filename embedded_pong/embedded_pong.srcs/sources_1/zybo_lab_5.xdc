@@ -12,12 +12,10 @@ set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { btn0 }
 set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { btn1 }]; 
 set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { btn2 }]; 
 set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { btn3 }];
-set_property -dict { PACKAGE_PIN MIO50   IOSTANDARD LVCMOS33 } [get_ports { btnr }];  
   
 ##Switches  
-set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { sw3 }]; #IO_L9P_T1_DQS_34 Sch=SW3
-set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { sw2 }]; #IO_L9P_T1_DQS_34 Sch=SW3
-
+set_property -dict { PACKAGE_PIN W13 IOSTANDARD LVCMOS33 } [get_ports { sw2 }]; #IO_L4N_T0_34 Sch=SW2
+set_property -dict { PACKAGE_PIN T16 IOSTANDARD LVCMOS33 } [get_ports { sw3 }]; #IO_L9P_T1_DQS_34 Sch=SW3
 ##VGA Connector
 set_property -dict { PACKAGE_PIN M19 IOSTANDARD LVCMOS33 } [get_ports { vga_r[0] }];
 #IO_L7P_T1_AD2P_35 Sch=VGA_R1
@@ -55,8 +53,14 @@ set_property -dict { PACKAGE_PIN P19 IOSTANDARD LVCMOS33 } [get_ports vga_hs];
 #IO_L13N_T2_MRCC_34 Sch=VGA_HS
 set_property -dict { PACKAGE_PIN R19 IOSTANDARD LVCMOS33 } [get_ports vga_vs]; #IO_0_34Sch=VGA_VS
 
-###UART
-#set_property -dict { PACKAGE_PIN T20 IOSTANDARD LVCMOS33 } [get_ports { RTS }];
-#set_property -dict { PACKAGE_PIN U20 IOSTANDARD LVCMOS33 } [get_ports { RXD }];
-#set_property -dict { PACKAGE_PIN V20 IOSTANDARD LVCMOS33 } [get_ports { TXD }];
-#set_property -dict { PACKAGE_PIN W20 IOSTANDARD LVCMOS33 } [get_ports { CTS }];
+###SSD
+#JB
+set_property -dict { PACKAGE_PIN T20 IOSTANDARD LVCMOS33 } [get_ports { AA }];
+set_property -dict { PACKAGE_PIN U20 IOSTANDARD LVCMOS33 } [get_ports { AB }];
+set_property -dict { PACKAGE_PIN V20 IOSTANDARD LVCMOS33 } [get_ports { AC }];
+set_property -dict { PACKAGE_PIN W20 IOSTANDARD LVCMOS33 } [get_ports { AD }];
+#JC
+set_property -dict { PACKAGE_PIN V15 IOSTANDARD LVCMOS33 } [get_ports { AE }];
+set_property -dict { PACKAGE_PIN W15 IOSTANDARD LVCMOS33 } [get_ports { AF }];
+set_property -dict { PACKAGE_PIN T11 IOSTANDARD LVCMOS33 } [get_ports { AG }];
+set_property -dict { PACKAGE_PIN T10 IOSTANDARD LVCMOS33 } [get_ports { C }];

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sat Dec 15 19:53:52 2018
+| Date         : Sat Dec 15 23:27:02 2018
 | Host         : ece07 running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   23 |     0 |       100 | 23.00 |
+| Bonded IOB                  |   33 |     0 |       100 | 33.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -146,8 +146,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   18 |                  IO |
-| IBUF     |    5 |                  IO |
+| OBUF     |   26 |                  IO |
+| IBUF     |    7 |                  IO |
 +----------+------+---------------------+
 
 
@@ -158,6 +158,7 @@ Table of Contents
 |          Ref Name         | Used |
 +---------------------------+------+
 | design_1_vga_ctrl_0_0     |    1 |
+| design_1_ssd_out_0_0      |    1 |
 | design_1_pixel_pusher_0_0 |    1 |
 | design_1_debounce_3_0     |    1 |
 | design_1_debounce_2_0     |    1 |

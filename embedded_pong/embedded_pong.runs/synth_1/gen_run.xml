@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1544921521">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1544934304">
   <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
@@ -41,6 +41,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/ssd_out.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -77,6 +83,7 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ssd_out_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_debounce_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_debounce_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_debounce_0_0"/>

@@ -42,11 +42,13 @@ entity controller is
        btn_down   : in  STD_LOGIC;
        btn_up2    : in  STD_LOGIC;
        btn_down2  : in  STD_LOGIC;
-       reset      : in  STD_LOGIC;
+       sw_reset   : in  STD_LOGIC;
        ai_mode    : in  STD_LOGIC;
        r_out      : out STD_LOGIC_VECTOR (4  downto 0) := (others => '0');
        b_out      : out STD_LOGIC_VECTOR (4  downto 0) := (others => '0');
-       g_out      : out STD_LOGIC_VECTOR (5  downto 0) := (others => '0')
+       g_out      : out STD_LOGIC_VECTOR (5  downto 0) := (others => '0');
+       score      : out STD_LOGIC_VECTOR (3 downto 0) := (others => '0');
+       player     : out STD_LOGIC
        );
 end controller;
 
@@ -69,25 +71,21 @@ signal r_sig : STD_LOGIC_VECTOR (4  downto 0) := (others => '0');
 signal b_sig : STD_LOGIC_VECTOR (4  downto 0) := (others => '0');
 signal g_sig : STD_LOGIC_VECTOR (5  downto 0) := (others => '0');
 
+signal reset : STD_LOGIC := '0';
+signal ai    : STD_LOGIC := '0';
+signal choose_player : STD_LOGIC := '0';
+
+signal score1 : STD_LOGIC_VECTOR (3 downto 0) := (others => '0');
+signal score2 : STD_LOGIC_VECTOR (3 downto 0) := (others => '0');
+
 
 begin
 
 r_out <= r_sig;
 g_out <= g_sig;
 b_out <= b_sig;
-
-reset_game: process(clk) begin
-    if rising_edge(clk) and (en = '1') then
-        if reset = '1' then
-            ball_x <= 320;
-            ball_y <= 240;
-            paddle1_y <= 240;
-            paddle2_y <= 240;
-            v_x <= 6;
-            v_y <= 2;
-        end if;
-    end if;
-end process;
+reset <= sw_reset;
+ai <= ai_mode;
 
 draw_paddle: process(clk) begin
     if rising_edge(clk) and (en = '1') then
@@ -95,7 +93,7 @@ draw_paddle: process(clk) begin
             r_sig <= (others => '1');
 --            b_sig <= (others => '1');
 --            g_sig <= (others => '1');
-        elsif unsigned(hcount) >= 620 and unsigned(hcount) < 630 and unsigned(vcount) >= paddle2_y and unsigned(vcount) <= paddle2_y + 50 then
+        elsif unsigned(hcount) >= 610 and unsigned(hcount) < 620 and unsigned(vcount) >= paddle2_y and unsigned(vcount) <= paddle2_y + 50 then
             r_sig <= (others => '1');
 --            b_sig <= (others => '1');
 --            g_sig <= (others => '1');
@@ -124,111 +122,159 @@ end process;
 
 move_paddle: process(clk) begin
     if rising_edge(clk) and (en = '1') and (frame = '1') then
-        if ((btn_up) = '1') then
-            if (paddle1_y > 0) then
-                paddle1_y <= paddle1_y - 4; 
-            end if;
+        if (reset = '1') then
+            paddle1_y <= 240;
+            paddle2_y <= 240;
+        else
+            if ai = '0' then 
+                if ((btn_up) = '1') then
+                    if (paddle1_y > 0) then
+                        paddle1_y <= paddle1_y - 4; 
+                    end if;
+                    
+                elsif((btn_down) = '1') then
+                    if (paddle1_y + 50 < 479) then
+                        paddle1_y <= paddle1_y + 4;
+                    end if; 
+                end if;
             
-        elsif((btn_down) = '1') then
-            if (paddle1_y + 50 < 479) then
-                paddle1_y <= paddle1_y + 4;
-            end if; 
-    end if;
-    
-           if ((btn_up2) = '1') then
-                if (paddle2_y > 0) then
-                    paddle2_y <= paddle2_y - 4; 
+                if ((btn_up2) = '1') then
+                    if (paddle2_y > 0) then
+                        paddle2_y <= paddle2_y - 4; 
+                    end if;
+                    
+                elsif((btn_down2) = '1') then
+                    if (paddle2_y + 50 < 479) then
+                        paddle2_y <= paddle2_y + 4;
+                    end if; 
+                end if;
+            else
+                if ((btn_up) = '1') then
+                    if (paddle1_y > 0) then
+                        paddle1_y <= paddle1_y - 4; 
+                    end if;
+                elsif((btn_down) = '1') then
+                    if (paddle1_y + 50 < 479) then
+                        paddle1_y <= paddle1_y + 4;
+                    end if; 
                 end if;
                 
-            elsif((btn_down2) = '1') then
-                if (paddle2_y + 50 < 479) then
-                    paddle2_y <= paddle2_y + 4;
-                end if; 
+                if (paddle2_y + 25 - ball_y + 3 >= 0) and ( paddle2_y > 1) then
+                    paddle2_y <= paddle2_y - 2;
+                
+                elsif(paddle2_y + 25 - ball_y +3 <= 0) and ( paddle2_y + 50 < 479) then
+                    paddle2_y <= paddle2_y + 2;
+        
+                end if;
+            end if;
         end if;
     end if;
 end process;
-
 
 -- ball_right = '1' => Right ball
 -- ball_up = '1' => Down ball
 move_ball: process(clk) begin
     if rising_edge(clk) and (en = '1') and (frame = '1') then
-    
-        -- Ball border bounce
-        if (ball_x < 5) then
-            ball_right <= '1';
-        elsif (ball_x + 7) > 634 then
-            ball_right <= '0';
-        end if;
-        
-        if (ball_y < 5) then
-            ball_up <= '0';
-        elsif (ball_y + 7) > 474 then
-            ball_up <= '1';
-        end if;
-        
-        
-        -- Paddle regions
-        -- Will bounce off at a greater angle if you hit the edges of the paddle
-        if (ball_x >= 20 and ball_x <= 30 and ball_y + 7 >= paddle1_y and ball_y <= paddle1_y + 15) then
-            if (ball_up ='0' and v_y < 3) then
-                v_y <= v_y + 1;
-            elsif (ball_up = '1' and v_y > 1) then
-                v_y <= v_y - 1;
-            end if;
-        end if;
-        
-        if (ball_x >= 20 and ball_x <= 30 and ball_y + 7 >= paddle1_y + 35 and ball_y <= paddle1_y + 50) then
-            if (ball_up ='0' and v_y < 3) then
-                v_y <= v_y - 1;
-            elsif (ball_up = '1' and v_y > 1) then
-                v_y <= v_y + 1;
-            end if;
-        end if;
-        
-        -- Paddle Left bounce
-        if (ball_x + 7 >= 20 and ball_x + 7 <= 30 and ball_y + 7 >= paddle1_y and ball_y <= paddle1_y + 50) then
-            ball_right <= '1';
-        end if;
-        
-        -- Paddle regions
-        -- Will bounce off at a greater angle if you hit the edges of the paddle
-        if (ball_x + 7 >= 620 and ball_x + 7 <= 630 and ball_y + 7 >= paddle2_y and ball_y <= paddle2_y + 15) then
-            if (ball_up ='0' and v_y < 3) then
-                v_y <= v_y + 1;
-            elsif (ball_up = '1' and v_y > 1) then
-                v_y <= v_y - 1;
-            end if;
-        end if;
-        
-        if (ball_x + 7 >= 620 and ball_x + 7 <= 630 and ball_y + 7 >= paddle1_y + 35 and ball_y <= paddle1_y + 50) then
-            if (ball_up ='0' and v_y < 3) then
-                v_y <= v_y - 1;
-            elsif (ball_up = '1' and v_y > 1) then
-                v_y <= v_y + 1;
-            end if;
-        end if;
-        
-        -- Paddle Right bounce
-        if (ball_x + 7 >= 620 and ball_x + 7 <= 630 and ball_y + 7 >= paddle2_y and ball_y <= paddle2_y + 50) then
-            ball_right <= '0';
-        end if;
-        
-        
-        if ball_right = '1' then
-            ball_x <= ball_x + v_x;
+        if (reset = '1') then
+            ball_x <= 320;
+            ball_y <= 240;
+            v_x <= 4;
+            v_y <= 2;
+            score1 <= (others => '0');
+            score2 <= (others => '0');
         else
-            ball_x <= ball_x - v_x;
+            -- Ball border bounce
+            if (ball_x < 5) then
+                ball_right <= '1';
+                score1 <= std_logic_vector(unsigned(score1) + 1);
+                ball_x <= 320;
+                ball_y <= 240;
+                v_x <= 4;
+                v_y <= 2;
+                
+            elsif (ball_x + 7) > 636 then
+                ball_right <= '0';
+                score2 <= std_logic_vector(unsigned(score2) + 1);
+                ball_x <= 320;
+                ball_y <= 240;
+                v_x <= 4;
+                v_y <= 2;
+             else
+                -- Paddle regions
+                    -- Will bounce off at a greater angle if you hit the edges of the paddle
+                if (ball_x >= 20 and ball_x <= 30 and ball_y + 7 >= paddle1_y and ball_y <= paddle1_y + 15) then
+                    if (ball_up ='0' and v_y < 5) then
+                        v_y <= v_y + 1;
+                    elsif (ball_up = '1' and v_y > 1) then
+                        v_y <= v_y - 1;
+                    end if;        
+                elsif (ball_x >= 20 and ball_x <= 30 and ball_y + 7 >= paddle1_y + 35 and ball_y <= paddle1_y + 50) then
+                    if (ball_up ='0' and v_y > 1) then
+                        v_y <= v_y - 1;
+                    elsif (ball_up = '1' and v_y < 5) then
+                        v_y <= v_y + 1;
+                    end if;
+                end if;
+                -- Paddle Left bounce
+                if (ball_x >= 20 and ball_x <= 30 and ball_y + 7 >= paddle1_y and ball_y <= paddle1_y + 50) then
+                    ball_right <= '1';
+                 end if;
+                 
+                 -- Paddle regions
+                 -- Will bounce off at a greater angle if you hit the edges of the paddle
+                if (ball_x + 7 >= 610 and ball_x + 7 <= 620 and ball_y + 7 >= paddle2_y and ball_y <= paddle2_y + 15) then
+                    if (ball_up ='0' and v_y < 5) then
+                        v_y <= v_y + 1;
+                    elsif (ball_up = '1' and v_y > 1) then
+                        v_y <= v_y - 1;
+                    end if;
+                elsif (ball_x + 7 >= 610 and ball_x + 7 <= 620 and ball_y + 7 >= paddle1_y + 35 and ball_y <= paddle1_y + 50) then
+                    if (ball_up ='0' and v_y > 1) then
+                        v_y <= v_y - 1;
+                    elsif (ball_up = '1' and v_y < 5) then
+                        v_y <= v_y + 1;
+                    end if;
+                end if;
+                
+                -- Paddle Right bounce
+                if (ball_x + 7 >= 610 and ball_x + 7 <= 620 and ball_y + 7 >= paddle2_y and ball_y <= paddle2_y + 50) then
+                    ball_right <= '0';
+                end if;
+                           
+                if (ball_y < 5) then
+                    ball_up <= '0';
+                elsif (ball_y + 7) > 476 then
+                    ball_up <= '1';
+                end if;
+                
+                if ball_right = '1' then
+                    ball_x <= ball_x + v_x;
+                else
+                    ball_x <= ball_x - v_x;
+                end if;
+                
+                if ball_up = '1' then
+                    ball_y <= ball_y - v_y;
+                else
+                    ball_y <= ball_y + v_y;
+                end if;
+             end if;       
         end if;
-        
-        if ball_up = '1' then
-            ball_y <= ball_y - v_y;
-        else
-            ball_y <= ball_y + v_y;
-        end if;
-
     end if;
 end process;
 
+ssd_write: process begin
+    if rising_edge(clk) and (en = '1') and (frame = '1') then
+        if choose_player = '0' then
+            player <= choose_player;
+            choose_player <= not choose_player;
+            score <= score2;  
+        else
+            player <= choose_player;
+            choose_player <= not choose_player;
+            score <= score1;  
+        end if;
+    end if;
+end process;
 
 end Behavioral;
