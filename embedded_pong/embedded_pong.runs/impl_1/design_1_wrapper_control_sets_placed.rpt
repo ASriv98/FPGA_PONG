@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sat Dec 15 19:18:00 2018
+| Date         : Sat Dec 15 19:54:59 2018
 | Host         : ece07 running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
 | Design       : design_1_wrapper
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    11 |
-| Unused register locations in slices containing registers |    44 |
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    36 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,7 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      4 |            3 |
+|      4 |            2 |
 |    16+ |            8 |
 +--------+--------------+
 
@@ -45,12 +45,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              42 |           13 |
+| No           | No                    | No                     |              46 |           18 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               4 |            2 |
+| No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               8 |            2 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             238 |           36 |
+| Yes          | Yes                   | No                     |             238 |           34 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -60,17 +60,16 @@ Table of Contents
 +----------------+-------------------------------------------+-------------------------------------------+------------------+----------------+
 |  Clock Signal  |               Enable Signal               |              Set/Reset Signal             | Slice Load Count | Bel Load Count |
 +----------------+-------------------------------------------+-------------------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG |                                           | design_1_i/clock_div_25_0/U0/clk_div      |                2 |              4 |
 |  clk_IBUF_BUFG | design_1_i/controller_0/U0/paddle2_y_reg0 |                                           |                1 |              4 |
 |  clk_IBUF_BUFG | design_1_i/controller_0/U0/paddle1_y_reg0 |                                           |                1 |              4 |
 |  clk_IBUF_BUFG | design_1_i/clock_div_25_0/U0/clk_div      | design_1_i/vga_ctrl_0/U0/hCnt0            |                3 |             20 |
-|  clk_IBUF_BUFG | design_1_i/vga_ctrl_0/U0/hCnt0            | design_1_i/vga_ctrl_0/U0/vCnt0            |                3 |             20 |
-|  clk_IBUF_BUFG | design_1_i/clock_div_25_0/U0/clk_div      | design_1_i/pixel_pusher_0/U0/R[4]_i_1_n_0 |                6 |             22 |
-|  clk_IBUF_BUFG |                                           |                                           |               13 |             42 |
+|  clk_IBUF_BUFG | design_1_i/vga_ctrl_0/U0/hCnt0            | design_1_i/vga_ctrl_0/U0/vCnt0            |                2 |             20 |
+|  clk_IBUF_BUFG | design_1_i/clock_div_25_0/U0/clk_div      | design_1_i/pixel_pusher_0/U0/R[4]_i_1_n_0 |                5 |             22 |
 |  clk_IBUF_BUFG | design_1_i/debounce_3/U0/count[0]_i_2_n_0 | design_1_i/debounce_3/U0/clear            |                6 |             44 |
 |  clk_IBUF_BUFG | design_1_i/debounce_2/U0/count[0]_i_2_n_0 | design_1_i/debounce_2/U0/clear            |                6 |             44 |
 |  clk_IBUF_BUFG | design_1_i/debounce_1/U0/count[0]_i_2_n_0 | design_1_i/debounce_1/U0/clear            |                6 |             44 |
 |  clk_IBUF_BUFG | design_1_i/debounce_0/U0/count[0]_i_2_n_0 | design_1_i/debounce_0/U0/clear            |                6 |             44 |
+|  clk_IBUF_BUFG |                                           |                                           |               18 |             46 |
 +----------------+-------------------------------------------+-------------------------------------------+------------------+----------------+
 
 

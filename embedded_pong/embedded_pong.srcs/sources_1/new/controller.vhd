@@ -42,7 +42,8 @@ entity controller is
        btn_down   : in  STD_LOGIC;
        btn_up2    : in  STD_LOGIC;
        btn_down2  : in  STD_LOGIC;
-       btn_reset  : in  STD_LOGIC;
+       reset      : in  STD_LOGIC;
+       ai_mode    : in  STD_LOGIC;
        r_out      : out STD_LOGIC_VECTOR (4  downto 0) := (others => '0');
        b_out      : out STD_LOGIC_VECTOR (4  downto 0) := (others => '0');
        g_out      : out STD_LOGIC_VECTOR (5  downto 0) := (others => '0')
@@ -54,10 +55,10 @@ architecture Behavioral of controller is
 signal paddle1_y : integer := 100;
 signal paddle2_y : integer := 100;
 
-signal ball_x : integer := 512;
-signal ball_y : integer := 348;
+signal ball_x : integer := 320;
+signal ball_y : integer := 240;
 
-signal v_x : integer := 6;
+signal v_x : integer := 4;
 signal v_y : integer := 2;
 
 signal ball_up : STD_LOGIC := '0';
@@ -75,14 +76,16 @@ r_out <= r_sig;
 g_out <= g_sig;
 b_out <= b_sig;
 
-reset: process(clk) begin
+reset_game: process(clk) begin
     if rising_edge(clk) and (en = '1') then
-        ball_x <= 512;
-        ball_y <= 348;
-        paddle1_y <= 348;
-        paddle2_y <= 348;
-        v_x <= 6;
-        v_y <= 2;
+        if reset = '1' then
+            ball_x <= 320;
+            ball_y <= 240;
+            paddle1_y <= 240;
+            paddle2_y <= 240;
+            v_x <= 6;
+            v_y <= 2;
+        end if;
     end if;
 end process;
 
@@ -150,6 +153,8 @@ end process;
 -- ball_up = '1' => Down ball
 move_ball: process(clk) begin
     if rising_edge(clk) and (en = '1') and (frame = '1') then
+    
+        -- Ball border bounce
         if (ball_x < 5) then
             ball_right <= '1';
         elsif (ball_x + 7) > 634 then
@@ -162,10 +167,49 @@ move_ball: process(clk) begin
             ball_up <= '1';
         end if;
         
-        if (ball_x >= 20 and ball_x <= 30 and ball_y + 7 >= paddle1_y and ball_y <= paddle1_y + 50) then
+        
+        -- Paddle regions
+        -- Will bounce off at a greater angle if you hit the edges of the paddle
+        if (ball_x >= 20 and ball_x <= 30 and ball_y + 7 >= paddle1_y and ball_y <= paddle1_y + 15) then
+            if (ball_up ='0' and v_y < 3) then
+                v_y <= v_y + 1;
+            elsif (ball_up = '1' and v_y > 1) then
+                v_y <= v_y - 1;
+            end if;
+        end if;
+        
+        if (ball_x >= 20 and ball_x <= 30 and ball_y + 7 >= paddle1_y + 35 and ball_y <= paddle1_y + 50) then
+            if (ball_up ='0' and v_y < 3) then
+                v_y <= v_y - 1;
+            elsif (ball_up = '1' and v_y > 1) then
+                v_y <= v_y + 1;
+            end if;
+        end if;
+        
+        -- Paddle Left bounce
+        if (ball_x + 7 >= 20 and ball_x + 7 <= 30 and ball_y + 7 >= paddle1_y and ball_y <= paddle1_y + 50) then
             ball_right <= '1';
         end if;
         
+        -- Paddle regions
+        -- Will bounce off at a greater angle if you hit the edges of the paddle
+        if (ball_x + 7 >= 620 and ball_x + 7 <= 630 and ball_y + 7 >= paddle2_y and ball_y <= paddle2_y + 15) then
+            if (ball_up ='0' and v_y < 3) then
+                v_y <= v_y + 1;
+            elsif (ball_up = '1' and v_y > 1) then
+                v_y <= v_y - 1;
+            end if;
+        end if;
+        
+        if (ball_x + 7 >= 620 and ball_x + 7 <= 630 and ball_y + 7 >= paddle1_y + 35 and ball_y <= paddle1_y + 50) then
+            if (ball_up ='0' and v_y < 3) then
+                v_y <= v_y - 1;
+            elsif (ball_up = '1' and v_y > 1) then
+                v_y <= v_y + 1;
+            end if;
+        end if;
+        
+        -- Paddle Right bounce
         if (ball_x + 7 >= 620 and ball_x + 7 <= 630 and ball_y + 7 >= paddle2_y and ball_y <= paddle2_y + 50) then
             ball_right <= '0';
         end if;

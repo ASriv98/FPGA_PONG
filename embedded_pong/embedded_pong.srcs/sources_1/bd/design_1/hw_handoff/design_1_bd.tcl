@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# clock_div_25, controller, debounce, debounce, debounce, debounce, debounce, pixel_pusher, vga_ctrl
+# clock_div_25, controller, debounce, debounce, debounce, debounce, pixel_pusher, vga_ctrl
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -168,7 +168,6 @@ proc create_root_design { parentCell } {
   set btn1 [ create_bd_port -dir I btn1 ]
   set btn2 [ create_bd_port -dir I btn2 ]
   set btn3 [ create_bd_port -dir I btn3 ]
-  set btnr [ create_bd_port -dir I btnr ]
   set clk [ create_bd_port -dir I -type clk clk ]
   set vga_b [ create_bd_port -dir O -from 4 -to 0 vga_b ]
   set vga_g [ create_bd_port -dir O -from 5 -to 0 vga_g ]
@@ -242,17 +241,6 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: debounce_4, and set properties
-  set block_name debounce
-  set block_cell_name debounce_4
-  if { [catch {set debounce_4 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $debounce_4 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: pixel_pusher_0, and set properties
   set block_name pixel_pusher
   set block_cell_name pixel_pusher_0
@@ -281,8 +269,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net btn2_1 [get_bd_ports btn2] [get_bd_pins debounce_1/btn]
   connect_bd_net -net btn3_1 [get_bd_ports btn3] [get_bd_pins debounce_2/btn]
   connect_bd_net -net btn_0_1 [get_bd_ports btn1] [get_bd_pins debounce_3/btn]
-  connect_bd_net -net btn_0_2 [get_bd_ports btnr] [get_bd_pins debounce_4/btn]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins clock_div_25_0/clock] [get_bd_pins controller_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins debounce_1/clk] [get_bd_pins debounce_2/clk] [get_bd_pins debounce_3/clk] [get_bd_pins debounce_4/clk] [get_bd_pins pixel_pusher_0/clk] [get_bd_pins vga_ctrl_0/clk]
+  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins clock_div_25_0/clock] [get_bd_pins controller_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins debounce_1/clk] [get_bd_pins debounce_2/clk] [get_bd_pins debounce_3/clk] [get_bd_pins pixel_pusher_0/clk] [get_bd_pins vga_ctrl_0/clk]
   connect_bd_net -net controller_0_b_out [get_bd_pins controller_0/b_out] [get_bd_pins pixel_pusher_0/b_in]
   connect_bd_net -net controller_0_g_out [get_bd_pins controller_0/g_out] [get_bd_pins pixel_pusher_0/g_in]
   connect_bd_net -net controller_0_r_out [get_bd_pins controller_0/r_out] [get_bd_pins pixel_pusher_0/r_in]
@@ -290,7 +277,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net debounce_1_dbnc [get_bd_pins controller_0/btn_down] [get_bd_pins debounce_1/dbnc]
   connect_bd_net -net debounce_2_dbnc [get_bd_pins controller_0/btn_up] [get_bd_pins debounce_2/dbnc]
   connect_bd_net -net debounce_3_dbnc [get_bd_pins controller_0/btn_up2] [get_bd_pins debounce_3/dbnc]
-  connect_bd_net -net debounce_4_dbnc [get_bd_pins controller_0/btn_reset] [get_bd_pins debounce_4/dbnc]
   connect_bd_net -net pixel_pusher_0_B [get_bd_ports vga_b] [get_bd_pins pixel_pusher_0/B]
   connect_bd_net -net pixel_pusher_0_G [get_bd_ports vga_g] [get_bd_pins pixel_pusher_0/G]
   connect_bd_net -net pixel_pusher_0_R [get_bd_ports vga_r] [get_bd_pins pixel_pusher_0/R]

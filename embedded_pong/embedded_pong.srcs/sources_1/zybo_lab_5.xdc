@@ -12,8 +12,11 @@ set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { btn0 }
 set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { btn1 }]; 
 set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { btn2 }]; 
 set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { btn3 }];
-set_property -dict { PACKAGE_PIN MI051   IOSTANDARD LVCMOS33 } [get_ports { btnr }];  
+set_property -dict { PACKAGE_PIN MIO50   IOSTANDARD LVCMOS33 } [get_ports { btnr }];  
   
+##Switches  
+set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { sw3 }]; #IO_L9P_T1_DQS_34 Sch=SW3
+set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { sw2 }]; #IO_L9P_T1_DQS_34 Sch=SW3
 
 ##VGA Connector
 set_property -dict { PACKAGE_PIN M19 IOSTANDARD LVCMOS33 } [get_ports { vga_r[0] }];
