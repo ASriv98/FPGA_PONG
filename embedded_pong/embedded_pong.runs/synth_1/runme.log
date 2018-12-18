@@ -11,42 +11,42 @@
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:36 ; elapsed = 00:00:15 . Memory (MB): peak = 1358.027 ; gain = 176.086 ; free physical = 6565 ; free virtual = 25459
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/nick/Documents/xillinx/Vivado/2018.2/data/ip'.
+add_files: Time (s): cpu = 00:01:04 ; elapsed = 00:00:30 . Memory (MB): peak = 1361.922 ; gain = 173.082 ; free physical = 359 ; free virtual = 10988
 Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24959 
+INFO: Helper process launched with PID 8083 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1358.027 ; gain = 0.000 ; free physical = 6458 ; free virtual = 25352
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1361.922 ; gain = 0.000 ; free physical = 241 ; free virtual = 10877
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:39]
-INFO: [Synth 8-3491] module 'design_1' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:14' bound to instance 'design_1_i' of component 'design_1' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:65]
-INFO: [Synth 8-638] synthesizing module 'design_1' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:43]
-INFO: [Synth 8-3491] module 'design_1_clock_div_25_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_clock_div_25_0_0_stub.vhdl:5' bound to instance 'clock_div_25_0' of component 'design_1_clock_div_25_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:200]
-INFO: [Synth 8-638] synthesizing module 'design_1_clock_div_25_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_clock_div_25_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'design_1_controller_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_controller_0_0_stub.vhdl:5' bound to instance 'controller_0' of component 'design_1_controller_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:205]
-INFO: [Synth 8-638] synthesizing module 'design_1_controller_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_controller_0_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_debounce_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_debounce_0_0_stub.vhdl:5' bound to instance 'debounce_0' of component 'design_1_debounce_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:224]
-INFO: [Synth 8-638] synthesizing module 'design_1_debounce_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_debounce_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_debounce_1_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_debounce_1_0_stub.vhdl:5' bound to instance 'debounce_1' of component 'design_1_debounce_1_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:230]
-INFO: [Synth 8-638] synthesizing module 'design_1_debounce_1_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_debounce_1_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_debounce_2_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_debounce_2_0_stub.vhdl:5' bound to instance 'debounce_2' of component 'design_1_debounce_2_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:236]
-INFO: [Synth 8-638] synthesizing module 'design_1_debounce_2_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_debounce_2_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_debounce_3_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_debounce_3_0_stub.vhdl:5' bound to instance 'debounce_3' of component 'design_1_debounce_3_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:242]
-INFO: [Synth 8-638] synthesizing module 'design_1_debounce_3_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_debounce_3_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_pixel_pusher_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_pixel_pusher_0_0_stub.vhdl:5' bound to instance 'pixel_pusher_0' of component 'design_1_pixel_pusher_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:248]
-INFO: [Synth 8-638] synthesizing module 'design_1_pixel_pusher_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_pixel_pusher_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_ssd_out_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_ssd_out_0_0_stub.vhdl:5' bound to instance 'ssd_out_0' of component 'design_1_ssd_out_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:261]
-INFO: [Synth 8-638] synthesizing module 'design_1_ssd_out_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_ssd_out_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'design_1_vga_ctrl_0_0' declared at '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_vga_ctrl_0_0_stub.vhdl:5' bound to instance 'vga_ctrl_0' of component 'design_1_vga_ctrl_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:275]
-INFO: [Synth 8-638] synthesizing module 'design_1_vga_ctrl_0_0' [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-24387-ece07/realtime/design_1_vga_ctrl_0_0_stub.vhdl:18]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (1#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (2#1) [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:39]
+INFO: [Synth 8-3491] module 'design_1' declared at '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:14' bound to instance 'design_1_i' of component 'design_1' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'design_1' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:43]
+INFO: [Synth 8-3491] module 'design_1_clock_div_25_0_0' declared at '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_clock_div_25_0_0_stub.vhdl:5' bound to instance 'clock_div_25_0' of component 'design_1_clock_div_25_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'design_1_clock_div_25_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_clock_div_25_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_controller_0_0' declared at '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_controller_0_0_stub.vhdl:5' bound to instance 'controller_0' of component 'design_1_controller_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_controller_0_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_debounce_0_0' declared at '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_debounce_0_0_stub.vhdl:5' bound to instance 'debounce_0' of component 'design_1_debounce_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'design_1_debounce_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_debounce_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_debounce_1_0' declared at '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_debounce_1_0_stub.vhdl:5' bound to instance 'debounce_1' of component 'design_1_debounce_1_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:230]
+INFO: [Synth 8-638] synthesizing module 'design_1_debounce_1_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_debounce_1_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_debounce_2_0' declared at '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_debounce_2_0_stub.vhdl:5' bound to instance 'debounce_2' of component 'design_1_debounce_2_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'design_1_debounce_2_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_debounce_2_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_debounce_3_0' declared at '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_debounce_3_0_stub.vhdl:5' bound to instance 'debounce_3' of component 'design_1_debounce_3_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:242]
+INFO: [Synth 8-638] synthesizing module 'design_1_debounce_3_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_debounce_3_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_pixel_pusher_0_0' declared at '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_pixel_pusher_0_0_stub.vhdl:5' bound to instance 'pixel_pusher_0' of component 'design_1_pixel_pusher_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'design_1_pixel_pusher_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_pixel_pusher_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_ssd_out_0_0' declared at '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_ssd_out_0_0_stub.vhdl:5' bound to instance 'ssd_out_0' of component 'design_1_ssd_out_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:261]
+INFO: [Synth 8-638] synthesizing module 'design_1_ssd_out_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_ssd_out_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_vga_ctrl_0_0' declared at '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_vga_ctrl_0_0_stub.vhdl:5' bound to instance 'vga_ctrl_0' of component 'design_1_vga_ctrl_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'design_1_vga_ctrl_0_0' [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/.Xil/Vivado-7618-nick-Q502LAB/realtime/design_1_vga_ctrl_0_0_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (1#1) [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/synth/design_1.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (2#1) [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:39]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1359.035 ; gain = 1.008 ; free physical = 6469 ; free virtual = 25363
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1369.934 ; gain = 8.012 ; free physical = 259 ; free virtual = 10889
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -59,55 +59,55 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1359.035 ; gain = 1.008 ; free physical = 6469 ; free virtual = 25363
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1369.934 ; gain = 8.012 ; free physical = 258 ; free virtual = 10888
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1359.035 ; gain = 1.008 ; free physical = 6469 ; free virtual = 25363
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1369.934 ; gain = 8.012 ; free physical = 258 ; free virtual = 10888
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_pixel_pusher_0_0/design_1_pixel_pusher_0_0/design_1_pixel_pusher_0_0_in_context.xdc] for cell 'design_1_i/pixel_pusher_0'
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_pixel_pusher_0_0/design_1_pixel_pusher_0_0/design_1_pixel_pusher_0_0_in_context.xdc] for cell 'design_1_i/pixel_pusher_0'
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_vga_ctrl_0_0/design_1_vga_ctrl_0_0/design_1_vga_ctrl_0_0_in_context.xdc] for cell 'design_1_i/vga_ctrl_0'
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_vga_ctrl_0_0/design_1_vga_ctrl_0_0/design_1_vga_ctrl_0_0_in_context.xdc] for cell 'design_1_i/vga_ctrl_0'
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_clock_div_25_0_0/design_1_clock_div_25_0_0/design_1_clock_div_25_0_0_in_context.xdc] for cell 'design_1_i/clock_div_25_0'
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_clock_div_25_0_0/design_1_clock_div_25_0_0/design_1_clock_div_25_0_0_in_context.xdc] for cell 'design_1_i/clock_div_25_0'
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/design_1_controller_0_0/design_1_controller_0_0_in_context.xdc] for cell 'design_1_i/controller_0'
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/design_1_controller_0_0/design_1_controller_0_0_in_context.xdc] for cell 'design_1_i/controller_0'
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_0/design_1_debounce_0_0/design_1_debounce_0_0_in_context.xdc] for cell 'design_1_i/debounce_0'
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_0/design_1_debounce_0_0/design_1_debounce_0_0_in_context.xdc] for cell 'design_1_i/debounce_0'
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_1_0/design_1_debounce_1_0/design_1_debounce_1_0_in_context.xdc] for cell 'design_1_i/debounce_1'
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_1_0/design_1_debounce_1_0/design_1_debounce_1_0_in_context.xdc] for cell 'design_1_i/debounce_1'
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_2_0/design_1_debounce_2_0/design_1_debounce_2_0_in_context.xdc] for cell 'design_1_i/debounce_2'
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_2_0/design_1_debounce_2_0/design_1_debounce_2_0_in_context.xdc] for cell 'design_1_i/debounce_2'
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_3_0/design_1_debounce_3_0/design_1_debounce_3_0_in_context.xdc] for cell 'design_1_i/debounce_3'
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_3_0/design_1_debounce_3_0/design_1_debounce_3_0_in_context.xdc] for cell 'design_1_i/debounce_3'
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_ssd_out_0_0/design_1_ssd_out_0_0/design_1_ssd_out_0_0_in_context.xdc] for cell 'design_1_i/ssd_out_0'
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_ssd_out_0_0/design_1_ssd_out_0_0/design_1_ssd_out_0_0_in_context.xdc] for cell 'design_1_i/ssd_out_0'
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/zybo_lab_5.xdc]
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/zybo_lab_5.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/zybo_lab_5.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_pixel_pusher_0_0/design_1_pixel_pusher_0_0/design_1_pixel_pusher_0_0_in_context.xdc] for cell 'design_1_i/pixel_pusher_0'
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_pixel_pusher_0_0/design_1_pixel_pusher_0_0/design_1_pixel_pusher_0_0_in_context.xdc] for cell 'design_1_i/pixel_pusher_0'
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_vga_ctrl_0_0/design_1_vga_ctrl_0_0/design_1_vga_ctrl_0_0_in_context.xdc] for cell 'design_1_i/vga_ctrl_0'
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_vga_ctrl_0_0/design_1_vga_ctrl_0_0/design_1_vga_ctrl_0_0_in_context.xdc] for cell 'design_1_i/vga_ctrl_0'
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_clock_div_25_0_0/design_1_clock_div_25_0_0/design_1_clock_div_25_0_0_in_context.xdc] for cell 'design_1_i/clock_div_25_0'
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_clock_div_25_0_0/design_1_clock_div_25_0_0/design_1_clock_div_25_0_0_in_context.xdc] for cell 'design_1_i/clock_div_25_0'
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/design_1_controller_0_0/design_1_controller_0_0_in_context.xdc] for cell 'design_1_i/controller_0'
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_controller_0_0/design_1_controller_0_0/design_1_controller_0_0_in_context.xdc] for cell 'design_1_i/controller_0'
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_0/design_1_debounce_0_0/design_1_debounce_0_0_in_context.xdc] for cell 'design_1_i/debounce_0'
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_0/design_1_debounce_0_0/design_1_debounce_0_0_in_context.xdc] for cell 'design_1_i/debounce_0'
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_1_0/design_1_debounce_1_0/design_1_debounce_1_0_in_context.xdc] for cell 'design_1_i/debounce_1'
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_1_0/design_1_debounce_1_0/design_1_debounce_1_0_in_context.xdc] for cell 'design_1_i/debounce_1'
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_2_0/design_1_debounce_2_0/design_1_debounce_2_0_in_context.xdc] for cell 'design_1_i/debounce_2'
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_2_0/design_1_debounce_2_0/design_1_debounce_2_0_in_context.xdc] for cell 'design_1_i/debounce_2'
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_3_0/design_1_debounce_3_0/design_1_debounce_3_0_in_context.xdc] for cell 'design_1_i/debounce_3'
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_debounce_3_0/design_1_debounce_3_0/design_1_debounce_3_0_in_context.xdc] for cell 'design_1_i/debounce_3'
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_ssd_out_0_0/design_1_ssd_out_0_0/design_1_ssd_out_0_0_in_context.xdc] for cell 'design_1_i/ssd_out_0'
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/ip/design_1_ssd_out_0_0/design_1_ssd_out_0_0/design_1_ssd_out_0_0_in_context.xdc] for cell 'design_1_i/ssd_out_0'
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/zybo_lab_5.xdc]
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/zybo_lab_5.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/zybo_lab_5.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1618.621 ; gain = 0.000 ; free physical = 6714 ; free virtual = 25582
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1596.512 ; gain = 0.000 ; free physical = 317 ; free virtual = 10860
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6792 ; free virtual = 25659
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 1596.512 ; gain = 234.590 ; free physical = 269 ; free virtual = 10839
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6792 ; free virtual = 25659
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 1596.512 ; gain = 234.590 ; free physical = 268 ; free virtual = 10838
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -123,10 +123,10 @@ Applied set_property DONT_TOUCH = true for design_1_i/debounce_2. (constraint fi
 Applied set_property DONT_TOUCH = true for design_1_i/debounce_3. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ssd_out_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6794 ; free virtual = 25660
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 1596.512 ; gain = 234.590 ; free physical = 268 ; free virtual = 10838
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6793 ; free virtual = 25660
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 1596.512 ; gain = 234.590 ; free physical = 265 ; free virtual = 10835
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -162,7 +162,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6793 ; free virtual = 25660
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:39 . Memory (MB): peak = 1596.512 ; gain = 234.590 ; free physical = 256 ; free virtual = 10824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -174,13 +174,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6671 ; free virtual = 25538
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1614.512 ; gain = 252.590 ; free physical = 257 ; free virtual = 10665
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6671 ; free virtual = 25538
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1614.512 ; gain = 252.590 ; free physical = 257 ; free virtual = 10665
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -192,7 +192,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6671 ; free virtual = 25538
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1615.512 ; gain = 253.590 ; free physical = 257 ; free virtual = 10665
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -216,7 +216,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6670 ; free virtual = 25538
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 1615.512 ; gain = 253.590 ; free physical = 272 ; free virtual = 10679
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -229,7 +229,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6670 ; free virtual = 25538
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 1615.512 ; gain = 253.590 ; free physical = 272 ; free virtual = 10679
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -241,25 +241,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6670 ; free virtual = 25538
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 1615.512 ; gain = 253.590 ; free physical = 272 ; free virtual = 10679
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6670 ; free virtual = 25538
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 1615.512 ; gain = 253.590 ; free physical = 272 ; free virtual = 10679
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6670 ; free virtual = 25538
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 1615.512 ; gain = 253.590 ; free physical = 272 ; free virtual = 10679
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6670 ; free virtual = 25538
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 1615.512 ; gain = 253.590 ; free physical = 272 ; free virtual = 10679
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -305,11 +305,11 @@ Report Instance Areas:
 |2     |  design_1_i |design_1 |    73|
 +------+-------------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6670 ; free virtual = 25538
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 1615.512 ; gain = 253.590 ; free physical = 272 ; free virtual = 10679
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1618.621 ; gain = 1.008 ; free physical = 6727 ; free virtual = 25594
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6727 ; free virtual = 25594
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1615.512 ; gain = 27.012 ; free physical = 344 ; free virtual = 10751
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:54 . Memory (MB): peak = 1615.520 ; gain = 253.590 ; free physical = 344 ; free virtual = 10751
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -321,9 +321,9 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 38 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 1618.621 ; gain = 260.594 ; free physical = 6714 ; free virtual = 25581
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:55 . Memory (MB): peak = 1629.512 ; gain = 267.590 ; free physical = 339 ; free virtual = 10742
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint '/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1618.621 ; gain = 0.000 ; free physical = 6716 ; free virtual = 25582
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 23:27:02 2018...
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1629.512 ; gain = 0.000 ; free physical = 337 ; free virtual = 10743
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 18 00:23:03 2018...

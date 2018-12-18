@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Sat Dec 15 23:28:34 2018
-| Host             : ece07 running 64-bit Ubuntu 16.04.5 LTS
+| Date             : Tue Dec 18 00:25:45 2018
+| Host             : nick-Q502LAB running 64-bit Ubuntu 16.04.5 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xc7z010clg400-1

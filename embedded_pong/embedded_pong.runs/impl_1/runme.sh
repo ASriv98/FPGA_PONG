@@ -7,20 +7,20 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/usr/local/xilinx/SDK/2018.2/bin:/usr/local/xilinx/Vivado/2018.2/ids_lite/ISE/bin/lin64:/usr/local/xilinx/Vivado/2018.2/bin
+  PATH=/home/nick/Documents/xillinx/SDK/2018.2/bin:/home/nick/Documents/xillinx/Vivado/2018.2/ids_lite/ISE/bin/lin64:/home/nick/Documents/xillinx/Vivado/2018.2/bin
 else
-  PATH=/usr/local/xilinx/SDK/2018.2/bin:/usr/local/xilinx/Vivado/2018.2/ids_lite/ISE/bin/lin64:/usr/local/xilinx/Vivado/2018.2/bin:$PATH
+  PATH=/home/nick/Documents/xillinx/SDK/2018.2/bin:/home/nick/Documents/xillinx/Vivado/2018.2/ids_lite/ISE/bin/lin64:/home/nick/Documents/xillinx/Vivado/2018.2/bin:$PATH
 fi
 export PATH
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH=/usr/local/xilinx/Vivado/2018.2/ids_lite/ISE/lib/lin64
+  LD_LIBRARY_PATH=/home/nick/Documents/xillinx/Vivado/2018.2/ids_lite/ISE/lib/lin64
 else
-  LD_LIBRARY_PATH=/usr/local/xilinx/Vivado/2018.2/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
+  LD_LIBRARY_PATH=/home/nick/Documents/xillinx/Vivado/2018.2/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/impl_1'
+HD_PWD='/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

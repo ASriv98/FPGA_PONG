@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../embedded_pong.srcs/sources_1/new/ssd_out.vhd" \
+"../../../../embedded_pong.srcs/sources_1/new/ssd_tb.vhd" \
+
+# Do not sort compile order
+nosort

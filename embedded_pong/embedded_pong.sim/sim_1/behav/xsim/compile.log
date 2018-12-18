@@ -1,0 +1,11 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/ssd_out.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ssd_out
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/ssd_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ssd_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/ssd_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ssd_tb
+ERROR: [VRFC 10-1412] syntax error near wait [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/ssd_tb.vhd:79]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/ssd_tb.vhd:38]
+INFO: [VRFC 10-240] VHDL file /home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/ssd_tb.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/new/ssd_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ssd_tb

@@ -1,0 +1,12 @@
+
+{ 
+    crc :  1985222140974730488  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 02b89779bec34214b9d630d091192ede --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip -L xpm --snapshot ssd_tb_behav xil_defaultlib.ssd_tb" , 
+    buildDate : "Jun 14 2018" , 
+    buildTime : "20:07:38" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/ssd_tb_behav/xsimk\"   \"xsim.dir/ssd_tb_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/ssd_tb_behav/obj/xsim_1.lnx64.o\" \"/home/nick/Documents/xillinx/Vivado/2018.2/lib/lnx64.o/librdi_simulator_kernel.so\"  \"/home/nick/Documents/xillinx/Vivado/2018.2/lib/lnx64.o/librdi_simbridge_kernel.so\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

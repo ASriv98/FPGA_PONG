@@ -1,0 +1,4 @@
+Running: xsim.dir/ssd_tb_behav/xsimk -simmode gui -wdb ssd_tb_behav.wdb -simrunnum 0 -socket 44709
+Design successfully loaded
+Design Loading Memory Usage: 42380 KB (Peak: 42380 KB)
+Design Loading CPU Usage: 20 ms

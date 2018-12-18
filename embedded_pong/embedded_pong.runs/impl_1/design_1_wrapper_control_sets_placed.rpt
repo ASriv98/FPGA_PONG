@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sat Dec 15 23:28:17 2018
-| Host         : ece07 running 64-bit Ubuntu 16.04.5 LTS
+| Date         : Tue Dec 18 00:25:18 2018
+| Host         : nick-Q502LAB running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
 | Design       : design_1_wrapper
 | Device       : xc7z010
@@ -64,8 +64,8 @@ Table of Contents
 |  clk_IBUF_BUFG | design_1_i/controller_0/U0/score1[3]_i_1_n_0 | design_1_i/controller_0/U0/score10        |                1 |              8 |
 |  clk_IBUF_BUFG | design_1_i/controller_0/U0/score20           | design_1_i/controller_0/U0/score10        |                2 |              8 |
 |  clk_IBUF_BUFG | design_1_i/controller_0/U0/paddle1_y2        |                                           |                1 |             12 |
-|  clk_IBUF_BUFG | design_1_i/clock_div_25_0/U0/clk_div         | design_1_i/vga_ctrl_0/U0/hCnt0            |                3 |             20 |
 |  clk_IBUF_BUFG | design_1_i/vga_ctrl_0/U0/hCnt0               | design_1_i/vga_ctrl_0/U0/vCnt0            |                4 |             20 |
+|  clk_IBUF_BUFG | design_1_i/clock_div_25_0/U0/clk_div         | design_1_i/vga_ctrl_0/U0/hCnt0            |                3 |             20 |
 |  clk_IBUF_BUFG | design_1_i/clock_div_25_0/U0/clk_div         | design_1_i/pixel_pusher_0/U0/R[4]_i_1_n_0 |                4 |             22 |
 |  clk_IBUF_BUFG | design_1_i/debounce_3/U0/count[0]_i_2_n_0    | design_1_i/debounce_3/U0/clear            |                6 |             44 |
 |  clk_IBUF_BUFG | design_1_i/debounce_2/U0/count[0]_i_2_n_0    | design_1_i/debounce_2/U0/clear            |                6 |             44 |

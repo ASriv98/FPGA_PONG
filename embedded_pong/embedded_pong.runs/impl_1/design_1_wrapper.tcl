@@ -60,26 +60,27 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
+  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-4552-nick-Q502LAB/incrSyn
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.cache/wt [current_project]
-  set_property parent.project_path /home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.xpr [current_project]
-  set_property ip_output_repo /home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.cache/wt [current_project]
+  set_property parent.project_path /home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.xpr [current_project]
+  set_property ip_output_repo /home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet /home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/design_1.bd
+  add_files /home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc /home/user/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/zybo_lab_5.xdc
+  read_xdc /home/nick/Documents/FPGA_PONG/embedded_pong/embedded_pong.srcs/sources_1/zybo_lab_5.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false
@@ -155,25 +156,6 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-  unset ACTIVE_STEP 
-}
-
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  catch { write_mem_info -force design_1_wrapper.mmi }
-  write_bitstream -force design_1_wrapper.bit 
-  catch { write_sysdef -hwdef design_1_wrapper.hwdef -bitfile design_1_wrapper.bit -meminfo design_1_wrapper.mmi -file design_1_wrapper.sysdef }
-  catch {write_debug_probes -quiet -force design_1_wrapper}
-  catch {file copy -force design_1_wrapper.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
